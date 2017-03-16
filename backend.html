@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Code for backend</title>
+	  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	  	<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+	</script> 
+<!--For carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
+</head>
+<body>
+<!--sample user input -->
+<label for="language">What are you studying?</label>
+<input type="text" class="form-control" id="language">
+
+<label for="city">What city are you in?</label>
+<input type="text" class="form-control" id="city">
+
+<label for="state">State?</label>
+<input type="text" class="form-control" id="state">
+
+<button type="button" class="btn btn-default" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Submit</button>
+
+<div id="jobs"></div>
+<!--Carousel-->
+
+<!--/////COUNTDOWN 'TIL LAST DAY///-->
+<script>
+var a = moment();
+var b = moment([2017, 7, 15]);
+    
+console.log("Bootcamp ends in: " + 
+  b.diff(a, "days") + " days"
+);
+
+<!--/////JOB TICKER///-->
+// Goals: 
+//To have mobile friendly ticker/carousel scroll at the bottom of app
+//each job listing will show: Job title, company and location
+//text will be a link to Dice listing
+
+//50 state picker for state input?
+//how does the book api handle more than one word submission in the book response?
+
+$("#searchBtn").on("click",function (){
+var language = $("#language").val();
+var city = $("#city").val();
+var state = $("#state").val();
+
+
+console.log(language);
+console.log(city);
+console.log(state);
+
+// Constructing a queryURL using the animal name
+var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=" +
+        language + "&city=" + city + ",+" + state + "&pgcnt=20";
+
+      // Performing an AJAX request with the queryURL
+      $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+        // After data comes back from the request
+        .done(function(response) {
+        	console.log(response);
+        	for(var i = 0; i < response.resultItemList.length; i++){
+          // console.log("company: " + response.resultItemList[i].company + 
+          // 	" , job title: " + response.resultItemList[i].jobTitle + 
+          // 	" , location: " + response.resultItemList[i].location);
+
+var jobDiv = $("<div>");
+jobDiv.prepend(joblink);
+jobDiv.append("</div>");
+
+//<a href="lldfalj.com">Job</a>
+var joblink = $("<a>");
+joblink.attr("href", response.resultItemList[i].detailUrl);
+joblink.html(response.resultItemList[i].jobTitle + "<br>" + response.resultItemList[i].company);
+joblink.append("<br><br>");
+$("#jobs").append(joblink);
+
+$("#jobs").owlCarousel({
+items: 1,
+autoPlay: true,
+autoPlaySpeed: 1000,
+autoPlayTimeout: 1000,
+autoPlayHoverPause: true,
+loop: true,
+margin: 10,
+lazyLoad: true,
+merge: true, 
+video: true,
+animateOut:         true,
+animateIn:          true,
+
+
+themeClass:         'owl-theme',
+
+baseClass:          'owl-carousel',
+
+itemClass:          'owl-item',
+
+centerClass:        'center',
+
+activeClass:        'active',
+
+navContainerClass:  'owl-nav',
+
+navClass:           ['owl-prev','owl-next'],
+
+controlsClass:      'owl-controls',
+
+dotClass:           'owl-dot',
+
+dotsClass:          'owl-dots',
+
+autoHeightClass:    'owl-height',
+
+
+
+responsive:{	
+480:{
+items:2
+},
+
+678:{
+items:3
+},
+
+960:{
+items:5
+}
+}
+});
+}
+
+    });
+  });
+
+
+<!--/////BOOKMARK///-->
+//Besides screencapture, perhaps theres a better way to list the links that is more aesthetically pleasing
+//add them dynamically, then
+//perhaps allows you to clear links when read
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
