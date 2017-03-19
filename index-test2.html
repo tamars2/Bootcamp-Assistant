@@ -6,13 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Code Assist</title>
-    <!-- JS -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/propeller.min.js"></script>
-    <!-- CSS -->
+    <!-- jQuery before Propeller.js -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <!-- Propeller Dropdown js -->
+    <script type="text/javascript" language="javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
+    <!-- Propeller ripple effect js -->
+    <script type="text/javascript" language="javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
+    <!-- Propeller Sidebar js -->
+    <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
+
+    <script type="text/javascript" src="assets/js/propeller.js"></script>
+    
+    
+    <!-- Bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!--<link rel = "stylesheet" href="./assets/css/bootstrap.css">-->
+    
+    
+    <!--Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Propeller css -->
     <link href="./assets/css/propeller.min.css" rel="stylesheet">
+    <!-- Custom css -->
     <link href="./assets/css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -45,7 +65,7 @@
                 
                 
               </div>
-              <div class="media-body media-middle">Menu</div>
+              <div class="media-body media-middle">Welcome!</div>
               <div class="media-right media-middle"><i class="material-icons pmd-sm">more_vert</i></div>
             </a>
             <ul class="dropdown-menu">
@@ -56,26 +76,16 @@
             </ul>
           </li>
           <li class="dropdown pmd-dropdown">
-            <a class="dropdown-toggle media pmd-ripple-effect " id="hide" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dashboard</i><span class="media-body media-middle"> Front End</span></a>
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">layers</i><span class="media-body media-middle"> Style</span></a>
             <ul class="dropdown-menu">
-              <li> <a  class="pmd-ripple-effect" href="">HTML</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">CSS</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">Bootstrap</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">Javascript</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="http://propeller.in/style/typography.php">Typography</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="http://propeller.in/style/icons.php">Icons</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="http://propeller.in/style/shadow.php">Shadow</a> </li>
             </ul>
           </li>
-          <li class="dropdown pmd-dropdown">
-          <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dns</i><span class="media-body media-middle"> Back End</span></a>
-            <ul class="dropdown-menu">
-              <li> <a  class="pmd-ripple-effect" href="">node.JS</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">React</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">MongoDB</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">mySQL</a> </li>
-            </ul>
-          </li>
-          <li> <a class="pmd-ripple-effect" href="https://jsfiddle.net" target="_blank"><i class="material-icons media-left media-middle">code</i> <span class="media-body">jsFiddle</span></a> </li>
-          <!-- <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Schedule</span></a> </li>
-          <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Follow Up</span></a> </li> -->
+          <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">delete</i> <span class="media-body">jsFiddle</span></a> </li>
+          <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Schedule</span></a> </li>
+          <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Follow Up</span></a> </li>
         </ul>
       </aside>
       <!-- Content -->
