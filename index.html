@@ -29,6 +29,7 @@
         </div>
         <!-- Navbar Right icon -->
         <div class="pmd-navbar-right-icon pull-right">
+
           <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary topbar-toggle visible-xs-inline-block" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="material-icons pmd-sm">more_vert</i></a>
           <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pmd-sidebar-toggle-right"><i class="material-icons" id="right-icon">more_horiz</i></a>
         </div>
@@ -52,7 +53,7 @@
             <ul class="dropdown-menu">
               <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">person</i> <span class="media-body">View Profile</span></a></li>
               <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">settings</i> <span class="media-body">Settings</span></a></li>
-              <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">history</i> <span class="media-body">Logout</span></a></li>
+              <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">exit_to_app</i> <span class="media-body">Logout</span></a></li>
               <li class="divider"></li>
             </ul>
           </li>
@@ -74,8 +75,16 @@
               <li> <a  class="pmd-ripple-effect" href="">mySQL</a> </li>
             </ul>
           </li>
+          <li class="dropdown pmd-dropdown">
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">collections_bookmark</i><span class="media-body media-middle">Bookmarks</span></a>
+            <ul class="dropdown-menu">
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 1</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 2</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 3</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 4</a> </li>
+            </ul>
+          </li>
           <li> <a class="pmd-ripple-effect" href="https://jsfiddle.net" target="_blank"><i class="material-icons media-left media-middle">code</i> <span class="media-body">jsFiddle</span></a> </li>
-          <li> <a class="pmd-ripple-effect" href="" target="_blank"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Bookmarks</span></a> </li>
           <!-- <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Schedule</span></a> </li>
           <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Follow Up</span></a> </li> -->
         </ul>
@@ -88,7 +97,7 @@
         
       </div>
       <!-- Right sidebar -->
-      <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-open pmd-z-depth" role="navigation" style="position: absolute;">
+      <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-closed pmd-z-depth" role="navigation" style="position: absolute;">
         <!-- Sidebar navigation -->
         <ul class="nav pmd-sidebar-nav">
           <h1 id="printed-media">Printed Media</h1>
