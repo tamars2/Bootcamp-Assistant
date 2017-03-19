@@ -9,6 +9,7 @@
     <!-- JS -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
     <script type="text/javascript" src="assets/js/propeller.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -29,7 +30,7 @@
         <!-- Navbar Right icon -->
         <div class="pmd-navbar-right-icon pull-right">
           <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary topbar-toggle visible-xs-inline-block" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="material-icons pmd-sm">more_vert</i></a>
-          <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pmd-sidebar-toggle-right"><i class="material-icons">more_horiz</i></a>
+          <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pmd-sidebar-toggle-right"><i class="material-icons" id="right-icon">more_horiz</i></a>
         </div>
       </div>
     </nav>
@@ -65,7 +66,7 @@
             </ul>
           </li>
           <li class="dropdown pmd-dropdown">
-          <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dns</i><span class="media-body media-middle"> Back End</span></a>
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dns</i><span class="media-body media-middle"> Back End</span></a>
             <ul class="dropdown-menu">
               <li> <a  class="pmd-ripple-effect" href="">node.JS</a> </li>
               <li> <a  class="pmd-ripple-effect" href="">React</a> </li>
@@ -74,25 +75,17 @@
             </ul>
           </li>
           <li> <a class="pmd-ripple-effect" href="https://jsfiddle.net" target="_blank"><i class="material-icons media-left media-middle">code</i> <span class="media-body">jsFiddle</span></a> </li>
+          <li> <a class="pmd-ripple-effect" href="" target="_blank"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Bookmarks</span></a> </li>
           <!-- <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Schedule</span></a> </li>
           <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Follow Up</span></a> </li> -->
         </ul>
       </aside>
       <!-- Content -->
       <div class="pmd-content" id="content">
-        <!-- <span class="dropdown pmd-dropdown clearfix">
-          <button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Language <span class="caret"></span></button>
-          <ul aria-labelledby="dropdownMenu2" role="menu" class="dropdown-menu">
-            <li class="dropdown-header" role="presentation">Front-End</li>
-            <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Action</a></li>
-            <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Another action</a></li>
-            <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Something else here</a></li>
-            <li class="dropdown-header" role="presentation">Back-End</li>
-            <li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Separated link</a></li>
-          </ul>
-        </span> -->
         <h2 class="headline">Welcome, </h2>
         <p>We have carefully curated these resources to help you along your coding bootcamp journey!</p>
+        <!-- Media, Title, and Description area -->
+        
       </div>
       <!-- Right sidebar -->
       <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-open pmd-z-depth" role="navigation" style="position: absolute;">
@@ -106,6 +99,10 @@
     <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-bottom pmd-z-depth ticker">
       
     </nav>
+    
+    <!-- Propeller Sidebar js -->
+    <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
+    
     
   </body>
 </html>
