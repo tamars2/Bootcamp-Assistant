@@ -5,26 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Propeller Basic HTML Template</title>
-
-    <!-- Bootstrap css-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-   
-   	<!--Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- Propeller css -->
-    <link href="css/propeller.min.css" rel="stylesheet">
+    <!-- HEROKU TEST -->
+    <title>Code Assist</title>
+    <!-- JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
+    <script type="text/javascript" src="assets/js/propeller.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="./assets/css/propeller.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
   </head>
-  
   <body>
-    <h1>Hello, world!</h1>
+    <!-- Default open sidebar -->
+    <!-- Nav menu -->
+    <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-top pmd-z-depth">
+      <div class="container-fluid">
+        <!-- Sidebar Toggle Button-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a>
+          <a class="navbar-brand" href="javascript:void(0);">Code Assist</a>
+        </div>
+        <!-- Navbar Right icon -->
+        <div class="pmd-navbar-right-icon pull-right">
 
-    <!-- jQuery before Propeller.js -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/propeller.min.js"></script>
+          <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary topbar-toggle visible-xs-inline-block" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="material-icons pmd-sm">more_vert</i></a>
+          <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pmd-sidebar-toggle-right"><i class="material-icons" id="right-icon">more_horiz</i></a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Open sidebar -->
+    <section id="pmd-main">
+      <!-- Left sidebar -->
+      <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-slide-push pmd-sidebar-left pmd-z-depth pmd-sidebar-open sidebar-hide-custom" role="navigation" style="position: absolute;">
+        <ul class="nav pmd-sidebar-nav">
+          <li class="dropdown pmd-dropdown pmd-user-info">
+            <a aria-expanded="false" data-sidebar="true" data-toggle="dropdown" class="btn-user dropdown-toggle media" href="javascript:void(0);">
+              <div class="media-left">
+                
+                
+              </div>
+              <div class="media-body media-middle">Menu</div>
+              <div class="media-right media-middle"><i class="material-icons pmd-sm">more_vert</i></div>
+            </a>
+            <ul class="dropdown-menu">
+              <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">person</i> <span class="media-body">View Profile</span></a></li>
+              <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">settings</i> <span class="media-body">Settings</span></a></li>
+              <li> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">exit_to_app</i> <span class="media-body">Logout</span></a></li>
+              <li class="divider"></li>
+            </ul>
+          </li>
+          <li class="dropdown pmd-dropdown">
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dashboard</i><span class="media-body media-middle"> Front End</span></a>
+            <ul class="dropdown-menu">
+              <li> <a  class="pmd-ripple-effect" href="">HTML</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">CSS</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Bootstrap</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Javascript</a> </li>
+            </ul>
+          </li>
+          <li class="dropdown pmd-dropdown">
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dns</i><span class="media-body media-middle"> Back End</span></a>
+            <ul class="dropdown-menu">
+              <li> <a  class="pmd-ripple-effect" href="">node.JS</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">React</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">MongoDB</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">mySQL</a> </li>
+            </ul>
+          </li>
+          <li class="dropdown pmd-dropdown">
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">collections_bookmark</i><span class="media-body media-middle">Bookmarks</span></a>
+            <ul class="dropdown-menu">
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 1</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 2</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 3</a> </li>
+              <li> <a  class="pmd-ripple-effect" href="">Bookmark 4</a> </li>
+            </ul>
+          </li>
+          <li> <a class="pmd-ripple-effect" href="https://jsfiddle.net" target="_blank"><i class="material-icons media-left media-middle">code</i> <span class="media-body">jsFiddle</span></a> </li>
+          <!-- <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Schedule</span></a> </li>
+          <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Follow Up</span></a> </li> -->
+        </ul>
+      </aside>
+      <!-- Content -->
+      <div class="pmd-content" id="content">
+        <h2 class="headline">Welcome, </h2>
+        <p>We have carefully curated these resources to help you along your coding bootcamp journey!</p>
+        <!-- Media, Title, and Description area -->
+        
+      </div>
+      <!-- Right sidebar -->
+      <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-closed pmd-z-depth" role="navigation" style="position: absolute;">
+        <!-- Sidebar navigation -->
+        <ul class="nav pmd-sidebar-nav">
+          <h1 id="printed-media">Printed Media</h1>
+        </ul>
+      </aside>
+      <div class="pmd-sidebar-overlay"></div>
+    </section>
+    <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-bottom pmd-z-depth ticker">
+      
+    </nav>
+    
+    <!-- Propeller Sidebar js -->
+    <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
+    
+    
   </body>
 </html>
