@@ -38,6 +38,7 @@ $(document).ready(function() {
 				method: "GET"
 			}).done(function(response) {
 				for (var i = 0; i < response.resultItemList.length; i++) {
+					$(".bxslider").empty();
 					///any way to style these results?? ie : yellow bold - job name, white italic -company etc
 					$(".bxslider").append("<li><a href='" + response.resultItemList[i].detailUrl + "'>company: " + response.resultItemList[i].company + " , job title: " + response.resultItemList[i].jobTitle + " , location: " + response.resultItemList[i].location + "</li>")
 				}
