@@ -10,6 +10,12 @@
 /* Propeller dropdown */
 @import "http://propeller.in/components/dropdown/css/dropdown.css";
 
+body{
+font-family: 'Roboto Slab', serif;
+/*font-family: 'Roboto', sans-serif;*/
+
+}
+
 /* Propeller icons */
 @import "http://fonts.googleapis.com/icon?family=Material+Icons";
 @import "http://propeller.in/components/icons/css/google-icons.css";
@@ -23,11 +29,77 @@
 /* Propeller sidebar */
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
 
+
 .ticker {
 	margin-bottom: 0;
 	border-radius: 0;
-
 }
+
+.container-fluid{
+	background-color: #000;
+}
+/*Header font color*/
+/*#header-navbar a{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}*/
+.navbar-header img{
+	float: left;
+	padding-right: 5px;
+}
+.navbar-header .navbar-brand span{
+	padding-left: 10px;
+	font-weight: bold;
+}
+/*header left humberger toggle icon*/
+.pmd-sidebar-toggle .material-icons{
+	color: #fff;
+}
+/*header right humbertoggle icon*/
+.pmd-sidebar-toggle-right .material-icons{
+    color: #fff;
+}
+/*"Welcom" background colot to GATech yellow*/
+#pmd-main{
+    background-color: #eeb211;
+}
+.welcom-dropdown h1{
+	font-size: 20px;
+	margin:0;
+}
+/*Left panel*/
+.pmd-sidebar-left{
+	background-color: #808080;
+}
+/*Left/right ripple bar background color*/
+.pmd-sidebar-nav{
+	background-color: #808080; 
+} 
+/*Left side ripple letter*/
+.pmd-ripple-effect span {
+    color: #fff;
+    font-size: 18px;
+}
+/*Left side ripple letter on hover   not working yet*/
+.pmd-ripple-effect span: hover{	
+	color: #545454;
+}
+/*right panel font color*/
+#printed-media{
+	color: #fff;	
+	text-align: center;
+}
+/*Right panel*/
+.pmd-sidebar-right-fixed{
+	background-color: #808080;
+}
+/*icons in right ripple*/  
+.pmd-ripple-effect i{
+    color: #fff;
+}
+
+
+
 
 /* Propeller card css */
 @import "http://propeller.in/components/card/css/card.css";
