@@ -106,3 +106,9 @@
 .header-title-bar .green-btn, .header-title-bar .pmd-svg.btn{ padding: 10px 12px;  min-width: inherit;}
 }
 /*----------------------------------- Media Queries ---------------------------*/
+
+
+/*----------------------------------- Motivational Quote Styling ---------------------------*/
+#motiv-quote{
+	font-size: 16px;
+}

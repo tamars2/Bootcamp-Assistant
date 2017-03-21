@@ -12,10 +12,19 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
     <script type="text/javascript" src="assets/js/propeller.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+    <!-- bxSlider Javascript file -->
+<script src="assets/js/jquery.bxslider.min.js"></script>
+
+
+
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="./assets/css/propeller.min.css" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
+    <!-- bxSlider CSS file -->
+<link href="assets/css/jquery.bxslider.css" rel="stylesheet">
   </head>
   <body>
     <!-- Default open sidebar -->
@@ -59,7 +68,7 @@
             </ul>
           </li>
           <li class="dropdown pmd-dropdown">
-            <a class="dropdown-toggle media pmd-ripple-effect " id="hide" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dashboard</i><span class="media-body media-middle"> Front End</span></a>
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dashboard</i><span class="media-body media-middle" id="front-end"> Front End</span></a>
             <ul class="dropdown-menu">
               <li> <a  class="pmd-ripple-effect" href="">HTML</a> </li>
               <li> <a  class="pmd-ripple-effect" href="">CSS</a> </li>
@@ -68,7 +77,7 @@
             </ul>
           </li>
           <li class="dropdown pmd-dropdown">
-            <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dns</i><span class="media-body media-middle"> Back End</span></a>
+            <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">dns</i><span class="media-body media-middle" id="back-end"> Back End</span></a>
             <ul class="dropdown-menu">
               <li> <a  class="pmd-ripple-effect" href="">node.JS</a> </li>
               <li> <a  class="pmd-ripple-effect" href="">React</a> </li>
@@ -92,7 +101,7 @@
       </aside>
       <!-- Content -->
       <div class="pmd-content" id="content">
-        <h2 class="headline">Welcome, </h2>
+        <h2 id="motiv-quote"></h2>
         <p>We have carefully curated these resources to help you along your coding bootcamp journey!</p>
         <!-- Media, Title, and Description area -->
         
@@ -106,8 +115,8 @@
       </aside>
       <div class="pmd-sidebar-overlay"></div>
     </section>
-    <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-bottom pmd-z-depth ticker">
-      
+    <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-bottom pmd-z-depth">
+
     </nav>
     
     <!-- Propeller Sidebar js -->
