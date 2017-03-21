@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
+<div class="owl-carousel">
+
+<div class="article"><h2>first one</h2></div>
+<div class="article"><h2>2nd</h2></div>
+
+<div class="article"><h2>3rd</h2></div>
+</div>
+
+<script>
+$('.owl-carousel').owlCarousel({
+items: 1,
+autoPlay: true,
+autoPlaySpeed: 1000,
+autoPlayTimeout: 1000,
+autoPlayHoverPause: true,
+loop: true,
+margin: 10,
+lazyLoad: true,
+merge: true, 
+video: true,
+animateOut:         true,
+animateIn:          true,
+
+
+themeClass:         'owl-theme',
+
+baseClass:          'owl-carousel',
+
+itemClass:          'owl-item',
+
+centerClass:        'center',
+
+activeClass:        'active',
+
+navContainerClass:  'owl-nav',
+
+navClass:           ['owl-prev','owl-next'],
+
+controlsClass:      'owl-controls',
+
+dotClass:           'owl-dot',
+
+dotsClass:          'owl-dots',
+
+autoHeightClass:    'owl-height',
+
+
+
+responsive:{	
+480:{
+items:2
+},
+
+678:{
+items:3
+},
+
+960:{
+items:5
+}
+}
+});
+</script>
