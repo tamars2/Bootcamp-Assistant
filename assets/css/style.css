@@ -23,10 +23,9 @@
 /* Propeller sidebar */
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
 
+.bxslider a {
+	color: #fff;
 
-.ticker {
-	margin-bottom: 0;
-	border-radius: 0;
 }
 
 .container-fluid{

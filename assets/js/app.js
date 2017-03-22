@@ -1,6 +1,37 @@
+var category;
+
+function buildTicker(category, zip) {
+	var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=" + category + "&city=" + zip + "&pgcnt=5";
+	//how do I prevent multiple calls?? OR overwrite ticker??
+	$.ajax({
+		url: queryURL,
+		method: "GET"
+	}).done(function(response) {
+		console.log(response);
+		for (var i = 0; i < response.resultItemList.length; i++) {
+			///any way to style these results?? ie : yellow bold - job name, white italic -company etc
+			//need a settimeout , first result not visible
+			//needs to open in new window
+			$(".bxslider").append("<li><a id='job-link' href='" + response.resultItemList[i].detailUrl + "'>" + response.resultItemList[i].company + " is looking for a " + response.resultItemList[i].jobTitle + " in " + response.resultItemList[i].location + "</li>");
+		}
+		$("#job-link").click(function() {
+			window.open(this.href);
+			return false;
+		});
+		$(".bxslider").bxSlider({
+			speed: 120000,
+			slideMargin: 10,
+			infiniteLoop: true,
+			ticker: true,
+			tickerHover: true,
+		});
+	}).error(function(err) {
+		console.log("error: " + err);
+	});
+}
 $(document).ready(function() {
-			///////MOTIVATIONAL QUOTE///////
-		// http://api.jquery.com/jquery.getjson/#jsonp
+	///////MOTIVATIONAL QUOTE///////
+	// http://api.jquery.com/jquery.getjson/#jsonp
 	$('#quoteGETJSON').click(function() {
 		$.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?").done(update).fail(handleErr);
 	});
@@ -16,42 +47,17 @@ $(document).ready(function() {
 	}).done(function(result) {
 		var blockquote = $("#motiv-quote");
 		$("#motiv-quote").html(result.quoteText);
-
 		var cite = $("<cite>");
 		blockquote.append(cite);
 		cite.text(result.quoteAuthor);
-	})
+	});
 	///////JOB TICKER ///////
-	$("#front-end").on("click", function() {
-			var language = "front+end+javascript";
-			//need code for login screen
-			var zip = 30305;
-			var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=" + language + "&city=" + zip + "&pgcnt=20";
-			var tickerDiv = $("<div>");
-			tickerDiv.appendTo(".navbar-fixed-bottom");
-			var tickerList = $("<ul>");
-			tickerList.addClass("bxslider");
-			tickerList.appendTo(tickerDiv);
-			//how do I prevent multiple calls?? OR overwrite ticker??
-			$.ajax({
-				url: queryURL,
-				method: "GET"
-			}).done(function(response) {
-				for (var i = 0; i < response.resultItemList.length; i++) {
-					$(".bxslider").empty();
-					///any way to style these results?? ie : yellow bold - job name, white italic -company etc
-					$(".bxslider").append("<li><a href='" + response.resultItemList[i].detailUrl + "'>company: " + response.resultItemList[i].company + " , job title: " + response.resultItemList[i].jobTitle + " , location: " + response.resultItemList[i].location + "</li>")
-				}
-				$(".bxslider").bxSlider({
-					speed: 350000,
-					slideMargin: 100,
-					infiniteLoop: true,
-					ticker: true,
-					tickerHover: true,
-				});
-			}).error(function(err) {
-				console.log("error: " + err);
-			});
-		})
-
+	$(".job-category").on("click", function(event) {
+		event.preventDefault();
+		if ($(this).attr("data-category") != category) {
+			$(".bxslider").empty();
+			category = $(this).attr("data-category");
+			buildTicker(category, 30309);
+		}
+	});
 });
