@@ -23,10 +23,7 @@
 /* Propeller sidebar */
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
 
-.bxslider a {
-	color: #fff;
 
-}
 
 .container-fluid{
 	background-color: #000;
@@ -209,4 +206,11 @@
 /*----------------------------------- Motivational Quote Styling ---------------------------*/
 #motiv-quote{
 	font-size: 16px;
+}
+
+/*----------------------------------- Bx Slider Styling ---------------------------*/
+
+.bxslider a {
+	color: #fff;
+
 }

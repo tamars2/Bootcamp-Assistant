@@ -1,8 +1,7 @@
 var category;
 
-function buildTicker(category, zip) {
-	var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=" + category + "&city=" + zip + "&pgcnt=5";
-	//how do I prevent multiple calls?? OR overwrite ticker??
+function buildTicker(zip) {
+	var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=javascript+full+stack&city=" + zip + "&pgcnt=5";
 	$.ajax({
 		url: queryURL,
 		method: "GET"
@@ -11,16 +10,15 @@ function buildTicker(category, zip) {
 		for (var i = 0; i < response.resultItemList.length; i++) {
 			///any way to style these results?? ie : yellow bold - job name, white italic -company etc
 			//need a settimeout , first result not visible
-			//needs to open in new window
-			$(".bxslider").append("<li><a id='job-link' href='" + response.resultItemList[i].detailUrl + "'>" + response.resultItemList[i].company + " is looking for a " + response.resultItemList[i].jobTitle + " in " + response.resultItemList[i].location + "</li>");
-		}
+		$(".bxslider").append("<li class='list'><a id='job-link' href='" + response.resultItemList[i].detailUrl + "'>" + response.resultItemList[i].company + " is looking for a " + response.resultItemList[i].jobTitle + " in " + response.resultItemList[i].location + "</li>");
+			}
 		$("#job-link").click(function() {
 			window.open(this.href);
 			return false;
 		});
 		$(".bxslider").bxSlider({
-			speed: 120000,
-			slideMargin: 10,
+			speed: 90000,
+			slideMargin: 0,
 			infiniteLoop: true,
 			ticker: true,
 			tickerHover: true,
@@ -29,6 +27,7 @@ function buildTicker(category, zip) {
 		console.log("error: " + err);
 	});
 }
+
 $(document).ready(function() {
 	///////MOTIVATIONAL QUOTE///////
 	// http://api.jquery.com/jquery.getjson/#jsonp
@@ -51,13 +50,8 @@ $(document).ready(function() {
 		blockquote.append(cite);
 		cite.text(result.quoteAuthor);
 	});
+
 	///////JOB TICKER ///////
-	$(".job-category").on("click", function(event) {
-		event.preventDefault();
-		if ($(this).attr("data-category") != category) {
-			$(".bxslider").empty();
-			category = $(this).attr("data-category");
-			buildTicker(category, 30309);
-		}
-	});
+	//alt working solution//
+	buildTicker(30309);
 });
