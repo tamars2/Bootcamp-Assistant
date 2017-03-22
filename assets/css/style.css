@@ -39,19 +39,7 @@ video {
     z-index: -100;
     background-size: cover;
 }
-/*.vid-container{
-  position:relative;
-  height:100vh;
-  min-height:100vh;
-  overflow:hidden;
-}
-.bgvid{
-  position:absolute;
-  left:0;
-  top:0;
-  width:100vw;
-  min-width:100vw;
-}*/
+
 
 
 .ticker {
@@ -62,11 +50,7 @@ video {
 .container-fluid{
 	background-color: #000;
 }
-/*Header font color*/
-/*#header-navbar a{
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-}*/
+
 .navbar-header img{
 	float: left;
 	padding-right: 5px;
