@@ -10,12 +10,6 @@
 /* Propeller dropdown */
 @import "http://propeller.in/components/dropdown/css/dropdown.css";
 
-body{
-font-family: 'Roboto Slab', serif;
-/*font-family: 'Roboto', sans-serif;*/
-
-}
-
 /* Propeller icons */
 @import "http://fonts.googleapis.com/icon?family=Material+Icons";
 @import "http://propeller.in/components/icons/css/google-icons.css";
