@@ -97,6 +97,10 @@ font-family: 'Roboto Slab', serif;
 .pmd-ripple-effect i{
     color: #fff;
 }
+/*not working*/
+#left-sidebar{ 
+	height:100%;
+}
 
 
 
