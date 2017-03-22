@@ -42,6 +42,7 @@ video {
 
 
 
+
 .ticker {
 	margin-bottom: 0;
 	border-radius: 0;
@@ -50,7 +51,11 @@ video {
 .container-fluid{
 	background-color: #000;
 }
-
+/*Header font color*/
+/*#header-navbar a{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}*/
 .navbar-header img{
 	float: left;
 	padding-right: 5px;
@@ -88,9 +93,18 @@ video {
     color: #fff;
     font-size: 18px;
 }
-/*Left side ripple letter on hover   not working yet*/
+/*Left panel ripple , inside letter color*/
+.dropdown-menu .pmd-ripple-effect {
+	color: #fff;
+	font-size: 15px;
+}
+/*========Left side ripple letter on hover   not working yet=======*/
 .pmd-ripple-effect span: hover{	
 	color: #545454;
+}
+/*=========Left side panel height not working yet========*/
+aside #left-sidebar {
+	height: 100%;
 }
 /*right panel font color*/
 #printed-media{
@@ -100,6 +114,7 @@ video {
 /*Right panel*/
 .pmd-sidebar-right-fixed{
 	background-color: #808080;
+    height: 100%;
 }
 /*icons in right ripple*/  
 .pmd-ripple-effect i{
@@ -196,6 +211,10 @@ video {
 }
 @media screen and (max-width: 479px){
 .about-panel .add-wire { top: 39%;}	
+  html{ background: url(./assets/images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+
 	
 }
 @media screen and (max-width: 320px){
