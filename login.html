@@ -12,6 +12,7 @@
     <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
     <script type="text/javascript" src="assets/js/propeller.min.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/userinfo.js"></script>
     <!-- bxSlider Javascript file -->
     <script src="assets/js/jquery.bxslider.min.js"></script>
     <!-- CSS -->
@@ -63,10 +64,67 @@
       </section>
     </div>
   </nav>
+  
+  <!-- Modal Login -->  
+  <div tabindex="-1" class="modal fade bca_userpref-ui" id="form-dialog" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog bca-userpref-style">
+		<div class="modal-content">
+			<div class="modal-header pmd-modal-bordered">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+				<h2 class="pmd-card-title-text">User Preferences</h2>
+			</div>
+
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<label id = "bca-userpref-cbx-newuser" class="checkbox-inline pmd-checkbox pmd-checkbox-ripple-effect" data-trigger="hover" data-toggle="popover" data-placement="left" data-content="Check If You Are A New User">
+						<input id = "bca_cbx" type="checkbox" value="false">
+						<span class="pmd-checkbox"> New User</span> 
+					</label>
+					
+					<div class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-userpref-name">Name</label>
+						<input type="text" class="mat-input form-control" id="bca-userpref-name" value="">
+						<span class="help-text ">Required!</span> 
+					</div>
+					
+					<div class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-userpref-username">Email</label>
+						<input type="text" class="mat-input form-control" id="bca-userpref-username" value="">
+						<span class="help-text ">Required!</span> 
+					</div>
+					
+					<div id="bca-userpref-confirmemail-grp" class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-userpref-emailid">Confirm Email </label>
+						<input type="text" class="mat-input form-control" id="bca-userpref-emailid" value="">
+					</div>
+          					<div class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-zipcode">Zip Code.</label>
+						<input type="text" class="mat-input form-control" id="bca-zipcode" value="">
+					</div>
+
+				</form>
+			</div>
+      <!-- End Modal Login -->
+  
+			<div class="pmd-modal-action">
+				<button data-dismiss="modal" id="bca-userpref-btn_submit" class="btn pmd-ripple-effect pmd-btn-flat btn-primary" type="button">Save changes</button>
+				<button data-dismiss="modal" id="bca-userpref-btn_discard" class="btn pmd-ripple-effect pmd-btn-flat btn-default" type="button">Discard</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+  
+  
   <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-bottom pmd-z-depth ticker">
     <a class="pmd-caption" href="./credits.html"><p id="copyright"><em>#electriclava</em></p></a>
   </nav>
   <!-- Propeller Sidebar js -->
   <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+  <script>
+    // open the modal form allowing data entry
+    editUserPreference();
+  </script>
 </body>
 </html>
