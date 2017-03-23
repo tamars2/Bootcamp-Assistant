@@ -8,14 +8,19 @@ function buildTicker(zip) {
 	}).done(function(response) {
 		console.log(response);
 		for (var i = 0; i < response.resultItemList.length; i++) {
+			var linkUrl = response.resultItemList[i].detailUrl;
+
 			///any way to style these results?? ie : yellow bold - job name, white italic -company etc
 			//need a settimeout , first result not visible
-		$(".bxslider").append("<li class='list'><a id='job-link' href='" + response.resultItemList[i].detailUrl + "'>" + response.resultItemList[i].company + " is looking for a " + response.resultItemList[i].jobTitle + " in " + response.resultItemList[i].location + "</li>");
-			}
-		$("#job-link").click(function() {
-			window.open(this.href);
+		$(".bxslider").append("<li><a class='list'  href='" + response.resultItemList[i].detailUrl + "' id=choice-" + [i] + ">" + response.resultItemList[i].company + " is looking for a " + response.resultItemList[i].jobTitle + " in " + response.resultItemList[i].location + "</li>");
+				
+
+		$("#choice-" + i, this).click(function() {
+			window.open("href", _blank);
 			return false;
 		});
+			}
+	
 		$(".bxslider").bxSlider({
 			speed: 90000,
 			slideMargin: 0,
@@ -55,3 +60,9 @@ $(document).ready(function() {
 	//alt working solution//
 	buildTicker(30305);
 }); 
+
+
+
+
+
+
