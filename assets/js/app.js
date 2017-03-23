@@ -53,5 +53,5 @@ $(document).ready(function() {
 
 	///////JOB TICKER ///////
 	//alt working solution//
-	buildTicker(30309);
-});
+	buildTicker(30305);
+}); 
