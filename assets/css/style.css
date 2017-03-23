@@ -24,10 +24,6 @@
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
 
 
-.ticker {
-	margin-bottom: 0;
-	border-radius: 0;
-}
 
 .container-fluid{
 	background-color: #000;
@@ -210,4 +206,11 @@
 /*----------------------------------- Motivational Quote Styling ---------------------------*/
 #motiv-quote{
 	font-size: 16px;
+}
+
+/*----------------------------------- Bx Slider Styling ---------------------------*/
+
+.bxslider a {
+	color: #ffffff;
+
 }
