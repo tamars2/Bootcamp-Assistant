@@ -63,6 +63,7 @@ video {
 .navbar-header .navbar-brand span{
 	padding-left: 10px;
 	font-weight: bold;
+    font-family: 'Roboto Slab', serif;
 }
 /*header left humberger toggle icon*/
 .pmd-sidebar-toggle .material-icons{
@@ -79,6 +80,7 @@ video {
 .welcom-dropdown h1{
 	font-size: 20px;
 	margin:0;
+	font-family: 'Roboto Slab', serif;
 }
 /*Left panel*/
 .pmd-sidebar-left{
@@ -92,11 +94,13 @@ video {
 .pmd-ripple-effect span {
     color: #fff;
     font-size: 18px;
+    font-family: 'Roboto Slab', serif;
 }
 /*Left panel ripple , inside letter color*/
 .dropdown-menu .pmd-ripple-effect {
 	color: #fff;
 	font-size: 15px;
+	font-family: 'Roboto Slab', serif;
 }
 /*========Left side ripple letter on hover   not working yet=======*/
 .pmd-ripple-effect span: hover{	
@@ -110,6 +114,7 @@ aside #left-sidebar {
 #printed-media{
 	color: #fff;	
 	text-align: center;
+	font-family: 'Roboto Slab', serif;
 }
 /*Right panel*/
 .pmd-sidebar-right-fixed{
@@ -119,10 +124,6 @@ aside #left-sidebar {
 /*icons in right ripple*/  
 .pmd-ripple-effect i{
     color: #fff;
-}
-/*not working*/
-#left-sidebar{ 
-	height:100%;
 }
 
 
