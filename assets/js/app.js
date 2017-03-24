@@ -64,10 +64,6 @@ $(document).ready(function() {
   alert( "Handler for .click() called." );
 });
 }); 
-
-
-
-
 	//////bookmark 1///////////
 	$("#url-0").on("click", function(e) {
 		e.preventDefault();
@@ -97,9 +93,3 @@ $(document).ready(function() {
 			console.log("error: " + err);
 		});
 	});
-}); 
-
-$("#logout").click(function() {
-  alert( "Handler for .click() called." );
-});
-
