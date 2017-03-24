@@ -61,6 +61,7 @@ $(document).ready(function() {
 
 
 
+
 	//////bookmark 1///////////
 	$("#url-0").on("click", function(e) {
 		e.preventDefault();
@@ -92,8 +93,6 @@ $(document).ready(function() {
 	});
 }); 
 
-
-
-
-
-
+$("#logout").click(function() {
+  alert( "Handler for .click() called." );
+});
