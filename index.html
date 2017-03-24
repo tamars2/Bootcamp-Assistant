@@ -23,20 +23,12 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Propeller css -->
     <link href="./assets/css/propeller.min.css" rel="stylesheet">
-      <!-- Propeller button -->
-  <link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet" />
-
     <link href="./assets/css/style.css" rel="stylesheet">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
-      <!-- Propeller card -->
-  <link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
     <!-- bxSlider CSS file -->
     <!-- <link href="assets/css/jquery.bxslider.min.css" rel="stylesheet"> -->
     <link href="assets/css/jquery.bxslider.css" rel="stylesheet">
-    <!-- Modal CSS -->
-      <link href="components/modal/css/modal.css" type="text/css" rel="stylesheet" /> 
-    
   </head>
   <body>
     <!-- Default open sidebar -->
@@ -99,13 +91,30 @@
 
    <!--Bookmarks -->
 
-          <li class="dropdown pmd-dropdown">
-            <a class="dropdown-toggle media pmd-ripple-effect " id="hide2" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm">collections_bookmark</i><span class="media-body media-middle">Bookmarks</span></a>
-            <ul class="dropdown-menu">
-              
-              <li class="btn pmd-ripple-effect btn-primary pmd-z-depth" data-target="#media-dialog-0" data-toggle="modal" type="text" id="url-0">Bookmark 1</li> 
-              
-              <div aria-hidden="true" class="modal fade" id="media-dialog-0" style="display: none;" tabindex="-1">
+       <!--    <li class="dropdown pmd-dropdown">
+            <i class="material-icons media-left pmd-sm">collections_bookmark</i><span class="media-body media-middle">Bookmarks</span></a> -->
+            
+            <!--Bookmark 1 -->
+            <li> <a class="pmd-ripple-effect" data-target="#media-dialog-0" data-toggle="modal" type="button" id="url-0"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Free Code Camp</a></span> </li>
+           
+            <!--Bookmark 2 -->
+             <li> <a class="pmd-ripple-effect" data-target="#media-dialog-1" data-toggle="modal" type="button" id="url-1"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Codeacademy</a></span> </li>
+
+             <!--Bookmark 3 -->
+              <li> <a class="pmd-ripple-effect" data-target="#media-dialog-2" data-toggle="modal" type="button" id="url-2"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">The Odin Project</a></span> </li>
+
+               <!--Bookmark 4 -->
+              <li> <a class="pmd-ripple-effect" data-target="#media-dialog-3" data-toggle="modal" type="button" id="url-3"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Bookmark 4</a></span> </li>
+
+          </li>
+          <li> <a class="pmd-ripple-effect" href="https://jsfiddle.net" target="_blank"><i class="material-icons media-left media-middle">code</i> <span class="media-body">jsFiddle</span></a> </li>
+        </ul>
+    <!--End of Bookmarks list-->
+      </aside>
+<!--MODALS -->
+
+<!--Bookmark 1 -->
+<div aria-hidden="true" class="modal fade" id="media-dialog-0" style="display: none;" tabindex="-1">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="pmd-modal-media"><img class="img-responsive" id="url-0-image" height="666" width="1184"></div>
@@ -123,17 +132,64 @@
                     </div>
                   </div>
 
-              <li> <a  class="pmd-ripple-effect" href="">Bookmark 2</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">Bookmark 3</a> </li>
-              <li> <a  class="pmd-ripple-effect" href="">Bookmark 4</a> </li>
-            </ul>
-          </li>
-          <li> <a class="pmd-ripple-effect" href="https://jsfiddle.net" target="_blank"><i class="material-icons media-left media-middle">code</i> <span class="media-body">jsFiddle</span></a> </li>
-        </ul>
-    <!--End of Bookmarks -->
+<!--Bookmark 2 -->
+<div aria-hidden="true" class="modal fade" id="media-dialog-1" style="display: none;" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="pmd-modal-media"><img class="img-responsive" id="url-1-image" height="666" width="1184"></div>
+                        <div class="pmd-card-title">
+                          <h2 class="pmd-card-title-text" id="url-1-title"></h2><span class="pmd-card-subtitle-text" id="url-1-second-title"></span>
+                        </div>
+                        <div class="modal-body" id="url-1-desc">
+                      
+                        </div>
+                        <div class="pmd-modal-action">
+                          <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button" id="url-1-site-link">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
 
-      </aside>
+<!--Bookmark 3 -->
+<div aria-hidden="true" class="modal fade" id="media-dialog-2" style="display: none;" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="pmd-modal-media"><img class="img-responsive" id="url-2-image" height="666" width="1184"></div>
+                        <div class="pmd-card-title">
+                          <h2 class="pmd-card-title-text" id="url-2-title"></h2><span class="pmd-card-subtitle-text" id="url-2-second-title"></span>
+                        </div>
+                        <div class="modal-body" id="url-2-desc">
+                      
+                        </div>
+                        <div class="pmd-modal-action">
+                          <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button" id="url-2-site-link">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
 
+<!--Bookmark 4 -->
+<div aria-hidden="true" class="modal fade" id="media-dialog-3" style="display: none;" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="pmd-modal-media"><img class="img-responsive" id="url-3-image" height="666" width="1184"></div>
+                        <div class="pmd-card-title">
+                          <h2 class="pmd-card-title-text" id="url-3-title"></h2><span class="pmd-card-subtitle-text" id="url-3-second-title"></span>
+                        </div>
+                        <div class="modal-body" id="url-3-desc">
+                      
+                        </div>
+                        <div class="pmd-modal-action">
+                          <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button" id="url-3-site-link">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+<!-- MODALS END -->
 
       <!-- Content -->
       
@@ -141,7 +197,7 @@
         <div class="col-md-10">
        <blockquote id="motiv-quote"></blockquote></div></div> 
       <div class="row pmd-content" id="video-cards">
-    
+
         <div class="col-md-3 card-type">
           <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
             <div class="pmd-card-media"> <img width="225" height="175" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
@@ -293,6 +349,5 @@
     </nav>
     <!-- Propeller Sidebar js -->
     <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
-
   </body>
 </html>

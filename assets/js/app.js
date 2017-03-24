@@ -12,11 +12,10 @@ function buildTicker(zip) {
 
 			///any way to style these results?? ie : yellow bold - job name, white italic -company etc
 			//need a settimeout , first result not visible
-		$(".bxslider").append("<li><a class='list'  href='" + response.resultItemList[i].detailUrl + "' id=choice-" + [i] + ">" + response.resultItemList[i].company + " is looking for a " + response.resultItemList[i].jobTitle + " in " + response.resultItemList[i].location + "</li>");
+		$(".bxslider").append("<li><a class='list' href='" + response.resultItemList[i].detailUrl + "' id=choice-" + [i] + ">" + response.resultItemList[i].company + " is looking for a " + response.resultItemList[i].jobTitle + " in " + response.resultItemList[i].location + "</li>");
 				
-
-		$("#choice-" + i, this).click(function() {
-			window.open("href", _blank);
+		$(".list").on('click', function(e) {
+			window.open(e.target.href);
 			return false;
 		});
 			}
