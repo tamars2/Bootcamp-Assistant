@@ -60,6 +60,12 @@ $(document).ready(function() {
 	buildTicker(30305);
 
 
+	$(".logout").click(function() {
+  alert( "Handler for .click() called." );
+});
+}); 
+
+
 
 
 	//////bookmark 1///////////
@@ -96,3 +102,4 @@ $(document).ready(function() {
 $("#logout").click(function() {
   alert( "Handler for .click() called." );
 });
+
