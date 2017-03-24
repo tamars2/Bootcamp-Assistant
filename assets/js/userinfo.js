@@ -1,9 +1,11 @@
 
 var dataStore; 
+var bcaCurrentUser;
+var validation = [];
 
 function connedtToDatabase()
-{
-    // Initialize Firebase
+{ 
+  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCqfTnrMLjnNr5VPR28AHSDfwbXNhPhMYY",
     authDomain: "bootcampstuff-c6ecb.firebaseapp.com",
@@ -13,14 +15,95 @@ function connedtToDatabase()
   };
   firebase.initializeApp(config);	
 	database = firebase.database();	
-	
+
   return database;
 }
 
-// Set the user name appearing in the navication bar
-function setNavBarUserID(userid)
+// this function can fire onclick handler for any DOM-Element
+function fireClickEvent(element) {
+    var evt = new window.MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+    });
+
+    element.dispatchEvent(evt);
+}
+
+// this function will setup a virtual anchor element
+// and fire click handler to open new URL in the same room
+// it works better than location.href=something or location.reload()
+function openNewURLInTheSameWindow() 
 {
-  $("#bca-userid").html(userid);
+  var a = document.createElement('a');
+  a.href = './index.html';
+  fireClickEvent(a);
+}
+
+function checkEmail(emailTest) 
+  {
+
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    // if (emailTest.length < 4)
+    // {
+      // return false;
+    // }
+    if (!filter.test(emailTest)) 
+    {
+      return false;
+    }
+    return true;
+  }  
+  
+function validateZipCode(zipCodeText)
+{
+  var parsedZipCode = zipCodeText.split();
+  if (parsedZipCode.length > 10 )
+  {
+    return false
+  }
+  if ((parsedZipCode.length > 5) & (parsedZipCode[5] != '-'))
+  {
+    return false;
+  }
+  if (parsedZipCode.length < 5)
+  {
+    return false;
+  }
+  
+}  
+  
+function verifyDataEntry()
+{
+	data = new userPreferenceEntry();
+  
+	if (!checkEmail(data.email))
+	{
+    validation[validation.length] = 'Please supply a valid Email';
+	}
+  
+	if (data.newUser == "new")
+	{
+		if (data.email != data.confirmEmail )
+		{
+      validation[validation.length] = 'Emails entered do not match'+'['+data.email+']'+'['+data.confirmEmail+']';
+		}
+		if (data.name.length<1)
+		{
+      validation[validation.length] = 'Please enter a name '+validation.length;
+		}
+    if (!validateZipCode(data.zipCode))
+    {
+       validation[validation.length] = 'Please supply a valid Zip Code';
+    }	
+  }
+  
+  if (validation.length > 0)
+  {
+    return false;
+  }
+  return true;
 }
 
 // Called from the menu bar this opens the login screen
@@ -31,42 +114,55 @@ function editUserPreference()
   $("#form-dialog").modal("toggle");
 }
 
-// Called from the menu bar when the user clicks on the logout 
-//********* NOT YET IMPLEMENTED
+// strip out unsupported characters
+// replace with placeholders
+function getUserPath(a)
+{
+	return a.split('.').join('-');
+}
+function loadUserFromDB(userid)
+{
 
-function addNewuserToDB(newuser)
+	dataStore.ref('/users/' + userid).once('value').then(function(snapshot) {
+	bcaCurrentUser = snapshot.val();
+	});
+}
+function addNewuserToDB(newUserPref)
 {
   // set path to useremail
-  var  userPath = newuser.email;
+  var  userPath = getUserPath(newUserPref.email);
      
   // save the user data 
-  dataStore.ref('users/' + userPath).set(newuser); 
-  
-  // set info in session memory
-  // user id = email
-  sessionStorage.setItem('GATechCodeAssist', newuser.email);
+  dataStore.ref('users/' + userPath).set(newUserPref); 
 }
 
 // Pulls the data entered unto the user login screen and places into an objcet
 function userPreferenceEntry()
 {	
-	var cbx = $('#bca_cbx');    
-  this.newUser = true; //cbx.context.activeElement.checked;// $("#bca-userpref-cbx-newuser").attr("value");
+  this.newUser = $("#bca-user-login").attr("data-bca-user-type");
   this.name = $("#bca-userpref-name").val().trim();
   this.email = $("#bca-userpref-username").val().trim();
+	this.confirmEmail = $("#bca-userpref-emailid").val().trim();
   this.zipCode = $("#bca-zipcode").val().trim();
 }
 
 // Submits the NewUser infotmation to the database 
-// Need to decide what how this does.
-// NOT YET IMPLEMENTED **************************
 function submitUIPrefdata()
 {
 	var userPref = new userPreferenceEntry();
-  console.log(userPref);
-  addNewuserToDB(userPref);
-  // go to the database and check fo
-  userPref.newUser=false;
+	if (userPref.newUser == "new")
+	{
+		userPref.newUser = "returning";
+		addNewuserToDB(userPref);
+		bcaCurrentUser = userPref;
+	}
+	else
+	{
+	  var userPath = getUserPath(userPref.email);
+		loadUserFromDB(userPath);
+	}
+  
+  openNewURLInTheSameWindow();
 }
 
 // right now does nothing as there is nothing to do when the worker clicks discard
@@ -75,43 +171,48 @@ function discardUIPrefdata()
 
 }
 
+// Hides and show data entry items on the modal user login screen based on new or returning rb
+function userType(userT)
+{
+	// new
+	if (userT == 1)
+	{
+		$("#bca-user-login").attr("data-bca-user-type","new");
+		$("#bca-userpref-confirmemail-grp").show();   
+		$("#bca-userpref-name-grp").show(); 
+    $("#bca-userpref-username-grp").show(); 
+	  $("#bca-userpref-emailid-grp").show(); 
+    $("#bca-zipcode-grp").show(); 
+		$(".help-text").show()
+	}
+	else // returning
+	{
+		$("#bca-user-login").attr("data-bca-user-type","returning");
+		$("#bca-userpref-confirmemail-grp").hide();  
+		$("#bca-userpref-name-grp").hide(); 
+    $("#bca-zipcode-grp").hide();
+		$(".help-text").hide();
+	}
+}
+
 // Event Handles for the items on the preference page
 function addEventHandlers()
-{
-  $("bca-brand").on("hover", function(e) {
-      displayHoverMessage();
-  });
-  
-	$("#bca-userpref-cbx-newuser").on("click", function (e) {	
-		var cbx = $('#bca_cbx');    
-    if (cbx.context.activeElement.checked == undefined)
-    {
-      
-    }
-    else
-    {
-      if (cbx.context.activeElement.checked)
-      {
-			$("#bca-userpref-confirmemail-grp").addClass("bca-hide");
-        
-      }
-      else
-      {
-			$("#bca-userpref-confirmemail-grp").removeClass("bca-hide"); 
-        
-      }
-    }
-	});
-	
+{	
 	$("#form-dialog").on("hidden.bs.modal", function (e) {	
   });
 
   
 	$("#bca-userpref-btn_submit").on("click", function (e){
-  	submitUIPrefdata();
+		//if (
+    verifyDataEntry();
+    //)
+    //{
+      submitUIPrefdata();
+    //}
 	});
 	
 	$("#bca-userpref-btn_discard").on("click", function (e){
 		discardUIPrefdata();
+    openNewURLInTheSameWindow();
 	});
 }
