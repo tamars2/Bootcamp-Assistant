@@ -54,7 +54,8 @@ $(document).ready(function() {
 	///////JOB TICKER ///////
 	//alt working solution//
 	buildTicker(30305);
-}); 
-$("#logout").click(function() {
+
+	$(".logout").click(function() {
   alert( "Handler for .click() called." );
 });
+}); 
