@@ -59,15 +59,11 @@ $(document).ready(function() {
 	//alt working solution//
 	buildTicker(30305);
 
-<<<<<<< HEAD
+
 	$(".logout").click(function() {
   alert( "Handler for .click() called." );
 });
 }); 
-=======
-
-
-
 	//////bookmark 1///////////
 	$("#url-0").on("click", function(e) {
 		e.preventDefault();
@@ -98,8 +94,3 @@ $(document).ready(function() {
 		});
 	});
 }); 
-
-$("#logout").click(function() {
-  alert( "Handler for .click() called." );
-});
->>>>>>> adac3d40ca638a0d172c91ccef364941d7fa0a26
