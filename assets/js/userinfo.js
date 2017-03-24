@@ -1,6 +1,7 @@
 
 var dataStore; 
 var bcaCurrentUser;
+var validation = [];
 
 function connedtToDatabase()
 { 
@@ -18,25 +19,93 @@ function connedtToDatabase()
   return database;
 }
 
+// this function can fire onclick handler for any DOM-Element
+function fireClickEvent(element) {
+    var evt = new window.MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+    });
+
+    element.dispatchEvent(evt);
+}
+
+// this function will setup a virtual anchor element
+// and fire click handler to open new URL in the same room
+// it works better than location.href=something or location.reload()
+function openNewURLInTheSameWindow() 
+{
+  var a = document.createElement('a');
+  a.href = './index.html';
+  fireClickEvent(a);
+}
+
+function checkEmail(emailTest) 
+  {
+
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    // if (emailTest.length < 4)
+    // {
+      // return false;
+    // }
+    if (!filter.test(emailTest)) 
+    {
+      return false;
+    }
+    return true;
+  }  
+  
+function validateZipCode(zipCodeText)
+{
+  var parsedZipCode = zipCodeText.split();
+  if (parsedZipCode.length > 10 )
+  {
+    return false
+  }
+  if ((parsedZipCode.length > 5) & (parsedZipCode[5] != '-'))
+  {
+    return false;
+  }
+  if (parsedZipCode.length < 5)
+  {
+    return false;
+  }
+  
+}  
+  
 function verifyDataEntry()
 {
 	data = new userPreferenceEntry();
+  
+	if (!checkEmail(data.email))
+	{
+    validation[validation.length] = 'Please supply a valid Email';
+	}
+  
 	if (data.newUser == "new")
 	{
 		if (data.email != data.confirmEmail )
 		{
-			return false;
+      validation[validation.length] = 'Emails entered do not match'+'['+data.email+']'+'['+data.confirmEmail+']';
 		}
 		if (data.name.length<1)
 		{
-			return false;
+      validation[validation.length] = 'Please enter a name '+validation.length;
 		}
-	}
-	if (data.email.length<4)
-	{
-		return false;
-	}
+    if (!validateZipCode(data.zipCode))
+    {
+       validation[validation.length] = 'Please supply a valid Zip Code';
+    }	
+  }
+  
+  if (validation.length > 0)
+  {
+    return false;
+  }
+  return true;
 }
+
 // Called from the menu bar this opens the login screen
 function editUserPreference()
 {
@@ -92,6 +161,8 @@ function submitUIPrefdata()
 	  var userPath = getUserPath(userPref.email);
 		loadUserFromDB(userPath);
 	}
+  
+  openNewURLInTheSameWindow();
 }
 
 // right now does nothing as there is nothing to do when the worker clicks discard
@@ -126,20 +197,22 @@ function userType(userT)
 
 // Event Handles for the items on the preference page
 function addEventHandlers()
-{
-  $("#bca-userpref-btn_submit").on("hover", function(e) {
-		verifyDataEntry();
-  });
-  	
+{	
 	$("#form-dialog").on("hidden.bs.modal", function (e) {	
   });
 
   
 	$("#bca-userpref-btn_submit").on("click", function (e){
-  	submitUIPrefdata();
+		//if (
+    verifyDataEntry();
+    //)
+    //{
+      submitUIPrefdata();
+    //}
 	});
 	
 	$("#bca-userpref-btn_discard").on("click", function (e){
 		discardUIPrefdata();
+    openNewURLInTheSameWindow();
 	});
 }

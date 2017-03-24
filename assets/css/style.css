@@ -207,7 +207,7 @@ aside #left-sidebar {
 }
 @media screen and (max-width: 479px){
 .about-panel .add-wire { top: 39%;}	
-  html{ background: url(./assets/images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
+  html{ background: url(../assets/images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }
 
