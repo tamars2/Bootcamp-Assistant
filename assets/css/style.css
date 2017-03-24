@@ -171,7 +171,7 @@ aside #left-sidebar {
 }
 
 
-@media only screen and (min-width:1024px) and (max-width:1100px){
+/*@media only screen and (min-width:1024px) and (max-width:1100px){
 .about-panel .pmd-card-custom { width: 450px;}
 .about-panel .img-rounded { width: 70px;}
 .gitter-chat-embed{ z-index:99999; left:70%;}
@@ -241,7 +241,7 @@ aside #left-sidebar {
   html{ background: url(../images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }
-
+*/
 	
 
 .pmd-card {
