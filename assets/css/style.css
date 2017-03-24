@@ -55,15 +55,12 @@ video {
 
 
 /*====================  Login page  =====================*/
-/*backgound color ======not working*/
 .modal-login{
-	background-color: #dcdcdc;
+	background-color: rgba( 250, 255, 255, 0.45 );
 	border-radius: 10px;
 	opacity: 30%;
-	width: 480px;	
+	width: 460px;	
 }
-
-
 /* User Login */
 .modal-header h2{
 	font-family: 'Roboto Slab', serif;
@@ -97,6 +94,17 @@ video {
 #bca-userpref-btn_discard{
 	font-size: 15px;
 }
+.modal-body{
+	margin: 0;
+	padding-bottom: 0;
+}
+.modal-header .pmd-modal-bordered{
+	margin-bottom: 0;
+}
+.pmd-modal-action{
+	padding-top: 0;
+}
+
 
 
 
