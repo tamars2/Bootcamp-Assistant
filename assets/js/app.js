@@ -55,3 +55,6 @@ $(document).ready(function() {
 	//alt working solution//
 	buildTicker(30305);
 }); 
+$("#logout").click(function() {
+  alert( "Handler for .click() called." );
+});
