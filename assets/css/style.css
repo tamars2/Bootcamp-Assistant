@@ -39,11 +39,69 @@ video {
     z-index: -100;
     background-size: cover;
 }
+/*===================  Credit page background  ====================*/
+.vid-container img {
+	position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+
+
+/*====================  Login page  =====================*/
+/*backgound color ======not working*/
+.modal-login{
+	background-color: #dcdcdc;
+	border-radius: 10px;
+	opacity: 30%;
+	width: 480px;	
+}
+
+
+/* User Login */
+.modal-header h2{
+	font-family: 'Roboto Slab', serif;
+	font-size: 25px;
+	text-align: center;
+	font-weight: bolder;
+}
+/* New User*/
+.checkbox-inline span{
+	font-family: 'Roboto Slab', serif;
+	font-size: 18px;
+}
+/* Required*/
+.form-group .help-text{
+	font-family: 'Roboto Slab', serif;
+	font-size: 15px;
+	padding-left: 10px;
+	color: #800000;
+}
+/* Name Email Confirm email Zip code */
+.form-group label{
+	font-family: 'Roboto Slab', serif;
+	padding-left: 10px;
+	font-size: 20px;
+}
+.pmd-modal-action button{
+	font-size: 23px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bolder;
+}
+#bca-userpref-btn_discard{
+	font-size: 15px;
+}
 
 
 
 
-
+/*====================  Main Page  ====================*/
 .container-fluid{
 	background-color: #000;
 }
@@ -98,11 +156,11 @@ video {
 	font-size: 15px;
 	font-family: 'Roboto Slab', serif;
 }
-/*========Left side ripple letter on hover   not working yet=======*/
+/*---------------Left side ripple letter on hover   not working yet---------------*/
 .pmd-ripple-effect span: hover{	
 	color: #545454;
 }
-/*=========Left side panel height not working yet========*/
+/*---------------Left side panel height not working yet---------------*/
 aside #left-sidebar {
 	height: 100%;
 }
