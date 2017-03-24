@@ -40,6 +40,15 @@ video {
     background-size: cover;
 }
 
+
+
+
+#video{
+	height:100% ;
+	width: 100%;
+}
+
+
 /*===================  Credit page background  ====================*/
 .vid-container img {
 	position: fixed;
@@ -111,6 +120,7 @@ video {
 
 
 /*====================  Main Page  ====================*/
+
 .container-fluid{
 	background-color: #000;
 }
@@ -233,7 +243,10 @@ aside #left-sidebar {
 @import "http://propeller.in/components/card/css/card.css";
 
 .card-type {
-	width: 225px;
+	width: 300px;
+	max-width: 1000px;
+	min-height:400px ;
+	max-height:450px ;
 	margin: 10px;
 
 }
