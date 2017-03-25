@@ -36,6 +36,7 @@ function buildTicker(zip) {
 
 $(document).ready(function() {
 	$('#logout').on("click", function(){
+		window.localStorage.removeItem("zip");
 		document.location.href = "http://frozen-forest-67094.herokuapp.com/login.html";
 	});
 	///////MOTIVATIONAL QUOTE///////
