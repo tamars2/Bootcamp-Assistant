@@ -1,351 +1,208 @@
 /* Bootstrap css */
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
-
 /* Propeller typography */
 @import "http://propeller.in/components/typography/css/typography.css";
-
 /* Propeller button */
 @import "http://propeller.in/components/button/css/button.css";
-
 /* Propeller dropdown */
 @import "http://propeller.in/components/dropdown/css/dropdown.css";
-
 /* Propeller icons */
 @import "http://fonts.googleapis.com/icon?family=Material+Icons";
 @import "http://propeller.in/components/icons/css/google-icons.css";
-
 /* Propeller navbar */
 @import "http://propeller.in/components/navbar/css/navbar.css";
-
 /* Propeller list */
 @import "http://propeller.in/components/list/css/list.css";
-
 /* Propeller sidebar */
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
-
-
 /* Propeller card css */
 @import "http://propeller.in/components/card/css/card.css";
-
 /* Background video */
 body{
-  padding:0;
-  margin:0;
+padding:0;
+margin:0;
 }
 video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    background-size: cover;
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+background-size: cover;
 }
-
-
-
-
 #video{
-	height:100% ;
-	width: 100%;
+height:100% ;
+width: 100%;
 }
-
-
 /*===================  Credit page background  ====================*/
 .vid-container img {
-	position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    background-size: cover;
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+background-size: cover;
 }
-
-
-
 /*====================  Login page  =====================*/
 .modal-login{
-	background-color: rgba( 250, 255, 255, 0.45 );
-	border-radius: 10px;
-	opacity: 30%;
-	width: 460px;	
+background-color: rgba( 250, 255, 255, 0.45 );
+border-radius: 10px;
+opacity: 30%;
+width: 460px;
 }
 /* User Login */
 .modal-header h2{
-	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
-	text-align: center;
-	font-weight: bolder;
+font-family: 'Roboto', sans-serif;
+font-size: 25px;
+text-align: center;
+font-weight: bolder;
 }
 /* New User*/
 .checkbox-inline span{
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+font-family: 'Roboto', sans-serif;
+font-size: 18px;
 }
 /* Required*/
 .form-group .help-text{
-	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-	padding-left: 10px;
-	color: #800000;
+font-family: 'Roboto', sans-serif;
+font-size: 15px;
+padding-left: 10px;
+color: #800000;
 }
 /* Name Email Confirm email Zip code */
 .form-group label{
-	font-family: 'Roboto', sans-serif;
-	padding-left: 10px;
-	font-size: 20px;
+font-family: 'Roboto', sans-serif;
+padding-left: 10px;
+font-size: 20px;
 }
 .pmd-modal-action button{
-	font-size: 23px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: bolder;
+font-size: 23px;
+font-family: 'Roboto', sans-serif;
+font-weight: bolder;
 }
 #bca-userpref-btn_discard{
-	font-size: 15px;
+font-size: 15px;
 }
 .modal-body{
-	margin: 0;
-	padding-bottom: 0;
+margin: 0;
+padding-bottom: 0;
 }
 .modal-header .pmd-modal-bordered{
-	margin-bottom: 0;
+margin-bottom: 0;
 }
 .pmd-modal-action{
-	padding-top: 0;
+padding-top: 0;
 }
-
-
-
-
-
 /*====================  Main Page  ====================*/
-
 .container-fluid{
-	background-color: #000;
+background-color: #000;
 }
-/*Header font color*/
-/*#header-navbar a{
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-}*/
 .navbar-header img{
-	float: left;
-	padding-right: 5px;
+float: left;
+padding-right: 5px;
 }
 .navbar-header .navbar-brand span{
-	padding-left: 10px;
-	font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+padding-left: 10px;
+font-weight: bold;
+font-family: 'Roboto', sans-serif;
 }
 /*header left humberger toggle icon*/
 .pmd-sidebar-toggle .material-icons{
-	color: #fff;
+color: #fff;
 }
 /*header right humbertoggle icon*/
 .pmd-sidebar-toggle-right .material-icons{
-    color: #fff;
+color: #fff;
 }
 /*"Welcom" background colot to GATech yellow*/
 #motiv-quote {
-    background-color: #eeb211;
+background-color: #eeb211;
 }
 .welcome-dropdown h1{
-	font-size: 20px;
-	margin:0;
-	font-family: 'Roboto', sans-serif;
+font-size: 20px;
+margin:0;
+font-family: 'Roboto', sans-serif;
 }
 /*Left panel*/
 .pmd-sidebar-left{
-	background-color: #808080;
+background-color: #808080;
 }
 /*Left/right ripple bar background color*/
 .pmd-sidebar-nav{
-	background-color: #808080; 
-} 
+background-color: #808080;
+}
 /*Left side ripple letter*/
 .pmd-ripple-effect span {
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+color: #fff;
+font-size: 18px;
+font-family: 'Roboto', sans-serif;
 }
 /*Left panel ripple , inside letter color*/
 .dropdown-menu .pmd-ripple-effect {
-	color: #fff;
-	font-size: 15px;
-	font-family: 'Roboto', sans-serif;
+color: #fff;
+font-size: 15px;
+font-family: 'Roboto', sans-serif;
 }
-
 .book {
-	width: 107px;
-	height: 160px;
-	margin: 0px;
-	padding: 0px;
+width: 107px;
+height: 160px;
+margin: 0px;
+padding: 0px;
 }
-
 .book {
-	
+
 }
-/*========Left side ripple letter on hover NOW WORKING=======*/
-/*a.job-category:hover{	
-	color: #545454;
-}*/
-a#frontend:hover .frontend, 
-a#backend:hover .backend, 
-a#bookmarks:hover .bookmarks, 
-a#jsfiddle:hover .jsfiddle, 
+/*========Left side text color dark on hover NOW WORKING=======*/
+a#frontend:hover .frontend,
+a#backend:hover .backend,
+a#bookmarks:hover .bookmarks,
+a#jsfiddle:hover .jsfiddle,
 .material-icons:hover,
 a.job-category:hover {
-	color: #545454;
+color: #545454;
 }
-
-/*a#backend:hover .backend {
-	color: #545454;
-}*/
-
-/*a#bookmarks:hover .bookmarks {
-	color: #545454;
-}
-
-a#jsfiddle:hover .jsfiddle {
-	color: #545454;
-}
-
-.material-icons:hover{
-	color: #545454;
-}*/
 /*=========Left side panel height not working yet========*/
-
 aside #left-sidebar {
-	height: 100%;
+height: 100%;
 }
 /*right panel font color*/
 #printed-media{
-	color: #fff;	
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
+color: #fff;
+text-align: center;
+font-family: 'Roboto', sans-serif;
 }
 /*Right panel*/
 .pmd-sidebar-right-fixed{
-	background-color: #808080;
-    height: 100%;
+background-color: #808080;
+height: 100%;
 }
-/*icons in right ripple*/  
+/*icons in right ripple*/
 .pmd-ripple-effect i{
-    color: #fff;
+color: #fff;
 }
-
-
-
-
-
-
 .card-type {
-	width: 300px;
-	height:400px;
-	max-width: 1000px;
-	min-height:400px ;
-	max-height:450px ;
-	margin: 10px;
-
+width: 300px;
+height:400px;
+max-width: 1000px;
+min-height:400px ;
+max-height:450px ;
+margin: 10px;
 }
-
-
 .pmd-caption {
-	font-size: 18px;
-	color: #9d9d9d;
-	float: right;
-	padding-right: 20px;
+font-size: 18px;
+color: #9d9d9d;
+float: right;
+padding-right: 20px;
 }
-
-
-
-/*@media only screen and (min-width:1024px) and (max-width:1100px){
-.about-panel .pmd-card-custom { width: 450px;}
-
-.about-panel .img-rounded { width: 70px;}
-.gitter-chat-embed{ z-index:99999; left:70%;}
-}
-@media screen and (max-width: 991px){
-.pmd-navbar .navbar-brand img { height:30px;}
-.collaborate-btn { margin-left:10px; min-width:120px; font-size:13px;}
-.main-bg .pmd-tabs .nav > li > a { padding-left:8px; padding-right:10px; font-weight:normal;}
-.about-panel .img-rounded { width:70px;}
-.gitter-chat-embed{ z-index:99999; left:50%;}
-}
-@media only screen and (min-width:768px) and (max-width:991px){
-.about-panel .pmd-card-title-text { font-size:14px;}
-.about-panel .add-wire { top:125px;}
-.about-panel .pmd-card-custom { max-width:325px; min-height:185px;}
-.about-panel .pmd-card-custom.pmd-card-blue { margin-top:35px;}
-.about-panel .pmd-card-custom.pmd-card-blue { min-height:auto;}
-.how-block img { max-height:150px;}	
-.about-panel .pmd-card-subtitle-text { font-size:13px;}
-.feature-block .block-title { font-size:14px;}
-.feature-block .block-content { font-size:13px;}
-.how-block .block-title { font-size:16px;}
-.how-block .block-content { font-size:14px;}
-
-.navbar-brand svg { width: 148px;}
-.collaborate-btn { font-size: 12px; min-width: 100px;}
-.main-bg .pmd-tabs .nav > li > a { padding-left: 6px; padding-right: 8px; font-size: 13px;}
-}
-@media screen and (max-width: 767px){
-.about-panel .pmd-card-custom { max-width:100%;}
-.about-panel .img-rounded { width:90px;}
-.about-panel .add-wire {top: 38%; z-index: 2;}
-.about-panel .pmd-card-custom.pmd-card-blue {clear: both; margin: 0 auto; position: static;}
-.feature-block img { max-height:95px;}
-.feature-block { margin-bottom:30px;}
-.btn-green-border { margin-top:20px;}
-.how-panel .right-border { border:0;}
-.navbar-inverse .pmd-navbar-sidebar{ background-color:#1f2f46;}
-.template-detail h1{ font-size:24px; margin-bottom:20px;}
-.template-button .btn{padding: 10px 12px 9px;}
-.template-detail .pmd-content{padding-left:0; padding-right:0; padding-top: 56px;}
-.pmd-navbar .navbar-brand svg { height:40px; width:auto;}
-.gmd-card { position:relative;}
-.gmd-card .media-right{ position:absolute; top:20px; margin:auto; height:60px; width:60px; padding:0;}
-.gmd-card .media-body{padding-left: 75px; text-align: left;}
-.bootstrap-card .media-middle{ vertical-align:top;}
-.bootstrap-card .media-middle img{margin-top:20px;}
-.gitter-chat-embed{ z-index:99999; left:15%;}
-
 .pmd-card {
-	height: 200px;
-}
-@media screen and (max-width: 480px){
-.about-panel .add-wire { top: 37%;}
-.header-title h1{ font-size:30px;}
-.banner-content{ font-size:20px;}	
-.section-title { font-size:24px;}
-.section-padding { padding:50px 0 60px;}
-.feature-block .block-content, .how-block .block-content { max-width:100%;}
-.support-content .mail-contact { font-size:18px;}
-.about-panel .img-rounded { width:60px;}
-.feature-block img { max-height:75px; margin-bottom:10px; margin-top:20px;}
-.header-title-bar { padding-top:105px;}
-.main-bg { height:auto; padding-bottom:50px;}
-.about-panel .pmd-card-title-text { word-break:keep-all;}
-.gitter-chat-embed{ z-index:99999; left:0%;}
-}
-@media screen and (max-width: 479px){
-.about-panel .add-wire { top: 39%;}
-  html{ background: url(../images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
-
-  #bgvid { display: none; }
-}
-*/
-	
-
-.pmd-card {
-	height: 350px;
-	overflow-wrap: break-word;
-
+height: 350px;
+overflow-wrap: break-word;
 }
 /*----------------------------------- webkits for animations ---------------------------*/
 @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
@@ -353,58 +210,47 @@ aside #left-sidebar {
 @-webkit-keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}100%{-webkit-transform:translateY(-100px);transform:translateY(-100px)}}@keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}100%{-webkit-transform:translateY(-100px);transform:translateY(-100px)}}
 @-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
 .card-type {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	-moz-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+-moz-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 .pmd-ripple-effect {
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
-	-moz-animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
-	animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+-moz-animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+animation: tracking-in-expand 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
 }
 /*----------------------------------- Motivational Quote Styling ---------------------------*/
 #motiv-quote{
-	font-size: 16px;
+font-size: 16px;
 }
 /*----------------------------------- Bx Slider Styling ---------------------------*/
-
 .bxslider a {
-	color: #ffffff;
-
+color: #ffffff;
 }
-
 /*----------------------------------- Time in Footer ----------------------------------- */
 #date-time{
-	float: left;
-	margin-left: 20px;
-	font-size: 16px;
-	letter-spacing: 1px;
+float: left;
+margin-left: 20px;
+font-size: 16px;
+letter-spacing: 1px;
 }
-
 /*----------------------------------- Media Queries ---------------------------*/
 @media only screen and (min-width:1024px) and (max-width:1100px){
-/*.pmd-card-custom { width: 450px;}*/
+.pmd-card-custom { width: 450px;}
 }
 @media screen and (max-width:767px){
-/*.pmd-navbar .navbar-brand { height:30px;}
-.nav > li > a { padding-left:8px; padding-right:10px; font-weight:normal;}*/
+.pmd-navbar .navbar-brand { height:30px;}
+.nav > li > a { padding-left:8px; padding-right:10px; font-weight:normal;}
 }
-/*@media only screen and (min-width:768px) and (max-width:991px){
+@media only screen and (min-width:768px) and (max-width:991px){
 .pmd-card-title-text { font-size:14px;}
-.add-wire { top:125px;}
 .pmd-card-custom { max-width:325px; min-height:185px;}
-.pmd-card-custom.pmd-card-blue { margin-top:35px;}
-.pmd-card-custom.pmd-card-blue { min-height:auto;}
-.how-block img { max-height:150px;}	
 .pmd-card-subtitle-text { font-size:13px;}
-.feature-block .block-title { font-size:14px;}
-.feature-block .block-content { font-size:13px;}
 .how-block .block-title { font-size:16px;}
 .how-block .block-content { font-size:14px;}
 .navbar-brand svg { width: 148px;}
-.collaborate-btn { font-size: 12px; min-width: 100px;}
 .main-bg .pmd-tabs .nav > li > a { padding-left: 6px; padding-right: 8px; font-size: 13px;}
-}*/
+}
 @media screen and (max-width: 767px){
 .pmd-card-custom { max-width:100%;}
 .pmd-card-custom {clear: both; margin: 0 auto; position: static;}
@@ -423,16 +269,12 @@ img { max-height:75px; margin-bottom:10px; margin-top:20px;}
 .pmd-card-title-text { word-break:keep-all;}
 }
 @media screen and (max-width: 479px){
-	
-  html { background: url(../images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
-  .bgvid { display: none; }	
-}
-@media screen and (max-width: 320px){
-/*.about-panel .add-wire { top: 39%;}
-.header-title-bar, .header-title-bar .pmd-svg.btn{ padding: 10px 12px;  min-width: inherit;}*/
+.about-panel .add-wire { top: 39%;}
+html{ background: url(../images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
+#bgvid { display: none; }
 }
 /*----------------------------------- Media Queries ---------------------------*/
-
-/** {
- 	font-family: 'Roboto', sans-serif;
- }*/
+.book {
+height: 200px;
+width: 107px;
+}

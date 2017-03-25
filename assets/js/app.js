@@ -1,4 +1,6 @@
 var category;
+var zipCode = localStorage.getItem("zip");
+console.log(zipCode);
 
 function buildTicker(zip) {
 	var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=javascript+full+stack&city=" + zip + "&pgcnt=5";
@@ -33,6 +35,9 @@ function buildTicker(zip) {
 }
 
 $(document).ready(function() {
+	$('#logout').on("click", function(){
+		document.location.href = "http://frozen-forest-67094.herokuapp.com/login.html";
+	});
 	///////MOTIVATIONAL QUOTE///////
 	// http://api.jquery.com/jquery.getjson/#jsonp
 	$('#quoteGETJSON').click(function() {
@@ -57,9 +62,7 @@ $(document).ready(function() {
 
 	///////JOB TICKER ///////
 	//alt working solution//
-	buildTicker(30305);
-
-
+	buildTicker(zipCode);
 
 ////////DATE & TIME IN FOOTER//////////
 $("#date-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
@@ -144,9 +147,7 @@ $("#date-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 			console.log("error: " + err);
 		});
 	});
-$('#logout').on("click", function() {
-	document.location.href = "http://frozen-forest-67094.herokuapp.com/login.html";
-});
+
 
 });
 

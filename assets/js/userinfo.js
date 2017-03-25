@@ -6,6 +6,8 @@ var name_passed = false;
 var email_passed = false;
 var con_email_passed = false;
 var zip_passed = false;
+//for local storage -TM
+var newZip;
 
 function connedtToDatabase()
 { 
@@ -58,6 +60,7 @@ function checkEmail(emailTest)
 function validateZipCode(zipCodeText)
 {
   var parsedZipCode = zipCodeText.split();
+  newZip = parsedZipCode;
   if (zipCodeText.length > 10 )
   {
     return false
@@ -246,6 +249,8 @@ function addEventHandlers()
   
 	$("#bca-userpref-btn_submit").on("click", function (e){
       submitUIPrefdata();
+      localStorage.clear();
+      localStorage.setItem("zip", newZip);
 	});
 	
 	$("#bca-userpref-btn_discard").on("click", function (e){
