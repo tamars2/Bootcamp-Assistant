@@ -305,8 +305,8 @@ $( document ).ready(function() {
 		var modal = $(this),
 			dialog = modal.find('.modal-dialog');
 			modal.css('display', 'block');
-			dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
-			$(".modal .actions").css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
+			dialog.css("margin-top", 20);
+			$(".modal .actions").css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 6));
 	}
 	$('.modal').on('show.bs.modal', reposition);
 	$(window).on('resize', function() {
