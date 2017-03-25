@@ -6,6 +6,7 @@ var name_passed = false;
 var email_passed = false;
 var con_email_passed = false;
 var zip_passed = false;
+//for local storage -TM
 var newZip;
 
 function connedtToDatabase()

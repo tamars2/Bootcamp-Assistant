@@ -35,6 +35,9 @@ function buildTicker(zip) {
 }
 
 $(document).ready(function() {
+	$('#logout').on("click", function(){
+		document.location.href = "http://frozen-forest-67094.herokuapp.com/login.html";
+	});
 	///////MOTIVATIONAL QUOTE///////
 	// http://api.jquery.com/jquery.getjson/#jsonp
 	$('#quoteGETJSON').click(function() {
@@ -60,8 +63,6 @@ $(document).ready(function() {
 	///////JOB TICKER ///////
 	//alt working solution//
 	buildTicker(zipCode);
-
-
 
 ////////DATE & TIME IN FOOTER//////////
 $("#date-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
@@ -147,9 +148,6 @@ $("#date-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 		});
 	});
 
-	$('#logout').on("click", function() {
-	document.location.href = "http://frozen-forest-67094.herokuapp.com/login.html";
-	});
 
 });
 

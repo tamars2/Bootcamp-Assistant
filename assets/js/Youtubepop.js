@@ -85,7 +85,7 @@ $("#video-cards").empty();
 
 for (var i = 0; i < response.items.length; i++) {
 	//card creation wiht video title and description
-$("#video-cards").append('<div class="col-md-3 card-type">'+'<div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">'+'<div class="pmd-card-media">'+'<iframe  id= "video" src="https://www.youtube.com/embed/'+response.items[i].id.videoId +'"frameborder="0" allowfullscreen></iframe>'+'</div>'+ '<div class="pmd-card-title">'+'<h2 class="pmd-card-title-text">'+response.items[i].snippet.title+'</h2>');
+$("#video-cards").append('<div class="col-md-1 card-type">'+'<div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">'+'<div class="pmd-card-media">'+'<iframe  id= "video" src="https://www.youtube.com/embed/'+response.items[i].id.videoId +'"frameborder="0" allowfullscreen></iframe>'+'</div>'+ '<div class="pmd-card-title">'+'<h2 class="pmd-card-title-text">'+response.items[i].snippet.title+'</h2>');
 // re-enable for description//+'<span class="pmd-card-subtitle-text">'+response.items[i].snippet.description+'</span>'+'</div></div></div>');
 }
 });
