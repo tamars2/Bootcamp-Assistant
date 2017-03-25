@@ -1,4 +1,22 @@
 
+var dataStore; 
+
+function connedtToDatabase()
+{
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCqfTnrMLjnNr5VPR28AHSDfwbXNhPhMYY",
+    authDomain: "bootcampstuff-c6ecb.firebaseapp.com",
+    databaseURL: "https://bootcampstuff-c6ecb.firebaseio.com",
+    storageBucket: "bootcampstuff-c6ecb.appspot.com",
+    messagingSenderId: "632661052823"
+  };
+  firebase.initializeApp(config);	
+	database = firebase.database();	
+	
+  return database;
+}
+
 // Set the user name appearing in the navication bar
 function setNavBarUserID(userid)
 {
@@ -8,21 +26,32 @@ function setNavBarUserID(userid)
 // Called from the menu bar this opens the login screen
 function editUserPreference()
 {
+  dataStore = connedtToDatabase();
+	addEventHandlers();
   $("#form-dialog").modal("toggle");
 }
 
 // Called from the menu bar when the user clicks on the logout 
 //********* NOT YET IMPLEMENTED
-function logoutUser()
+
+function addNewuserToDB(newuser)
 {
-	alert('adrian');
+  // set path to useremail
+  var  userPath = newuser.email;
+     
+  // save the user data 
+  dataStore.ref('users/' + userPath).set(newuser); 
+  
+  // set info in session memory
+  // user id = email
+  sessionStorage.setItem('GATechCodeAssist', newuser.email);
 }
 
 // Pulls the data entered unto the user login screen and places into an objcet
 function userPreferenceEntry()
 {	
 	var cbx = $('#bca_cbx');    
-  this.newUser = cbx.context.activeElement.checked;// $("#bca-userpref-cbx-newuser").attr("value");
+  this.newUser = true; //cbx.context.activeElement.checked;// $("#bca-userpref-cbx-newuser").attr("value");
   this.name = $("#bca-userpref-name").val().trim();
   this.email = $("#bca-userpref-username").val().trim();
   this.zipCode = $("#bca-zipcode").val().trim();
@@ -34,6 +63,9 @@ function userPreferenceEntry()
 function submitUIPrefdata()
 {
 	var userPref = new userPreferenceEntry();
+  console.log(userPref);
+  addNewuserToDB(userPref);
+  // go to the database and check fo
   userPref.newUser=false;
 }
 
@@ -82,10 +114,4 @@ function addEventHandlers()
 	$("#bca-userpref-btn_discard").on("click", function (e){
 		discardUIPrefdata();
 	});
-}
-
-function temp()
-{
-	addEventHandlers();
-  setNavBarUserID("samantha davis jones");
 }
