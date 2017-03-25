@@ -23,6 +23,10 @@
 /* Propeller sidebar */
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
 
+
+/* Propeller card css */
+@import "http://propeller.in/components/card/css/card.css";
+
 /* Background video */
 body{
   padding:0;
@@ -239,8 +243,6 @@ aside #left-sidebar {
 
 
 
-/* Propeller card css */
-@import "http://propeller.in/components/card/css/card.css";
 
 .card-type {
 	width: 300px;
@@ -334,7 +336,8 @@ aside #left-sidebar {
 	
 
 .pmd-card {
-	height: 200px;
+	height: 350px;
+	overflow-wrap: break-word;
 
 }
 /*----------------------------------- webkits for animations ---------------------------*/
