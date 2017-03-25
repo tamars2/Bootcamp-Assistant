@@ -246,6 +246,7 @@ aside #left-sidebar {
 
 .card-type {
 	width: 300px;
+	height:400px;
 	max-width: 1000px;
 	min-height:400px ;
 	max-height:450px ;
@@ -253,16 +254,19 @@ aside #left-sidebar {
 
 }
 
+
 .pmd-caption {
-	font-size: 20px;
+	font-size: 18px;
 	color: #9d9d9d;
 	float: right;
 	padding-right: 20px;
 }
 
 
+
 /*@media only screen and (min-width:1024px) and (max-width:1100px){
 .about-panel .pmd-card-custom { width: 450px;}
+
 .about-panel .img-rounded { width: 70px;}
 .gitter-chat-embed{ z-index:99999; left:70%;}
 }
@@ -310,6 +314,9 @@ aside #left-sidebar {
 .bootstrap-card .media-middle{ vertical-align:top;}
 .bootstrap-card .media-middle img{margin-top:20px;}
 .gitter-chat-embed{ z-index:99999; left:15%;}
+
+.pmd-card {
+	height: 200px;
 }
 @media screen and (max-width: 480px){
 .about-panel .add-wire { top: 37%;}
@@ -363,7 +370,17 @@ aside #left-sidebar {
 
 .bxslider a {
 	color: #ffffff;
+
 }
+
+/*----------------------------------- Time in Footer ----------------------------------- */
+#date-time{
+	float: left;
+	margin-left: 20px;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
 /*----------------------------------- Media Queries ---------------------------*/
 @media only screen and (min-width:1024px) and (max-width:1100px){
 /*.pmd-card-custom { width: 450px;}*/
