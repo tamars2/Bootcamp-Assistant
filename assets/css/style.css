@@ -23,6 +23,10 @@
 /* Propeller sidebar */
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
 
+
+/* Propeller card css */
+@import "http://propeller.in/components/card/css/card.css";
+
 /* Background video */
 body{
   padding:0;
@@ -239,8 +243,6 @@ aside #left-sidebar {
 
 
 
-/* Propeller card css */
-@import "http://propeller.in/components/card/css/card.css";
 
 .card-type {
 	width: 300px;
@@ -261,9 +263,10 @@ aside #left-sidebar {
 }
 
 
-@media only screen and (min-width:1024px) and (max-width:1100px){
-.about-panel .pmd-card-custom { width: 450px;
-								min-height: 400px;		}
+
+/*@media only screen and (min-width:1024px) and (max-width:1100px){
+.about-panel .pmd-card-custom { width: 450px;}
+
 .about-panel .img-rounded { width: 70px;}
 .gitter-chat-embed{ z-index:99999; left:70%;}
 }
@@ -333,11 +336,12 @@ aside #left-sidebar {
 
   #bgvid { display: none; }
 }
-
+*/
 	
 
 .pmd-card {
-	height: 200px;
+	height: 350px;
+	overflow-wrap: break-word;
 
 }
 /*----------------------------------- webkits for animations ---------------------------*/
