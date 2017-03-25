@@ -246,12 +246,14 @@ aside #left-sidebar {
 
 .card-type {
 	width: 300px;
+	height:400px;
 	max-width: 1000px;
 	min-height:400px ;
 	max-height:450px ;
 	margin: 10px;
 
 }
+
 
 .pmd-caption {
 	font-size: 18px;
@@ -264,6 +266,7 @@ aside #left-sidebar {
 
 /*@media only screen and (min-width:1024px) and (max-width:1100px){
 .about-panel .pmd-card-custom { width: 450px;}
+
 .about-panel .img-rounded { width: 70px;}
 .gitter-chat-embed{ z-index:99999; left:70%;}
 }
