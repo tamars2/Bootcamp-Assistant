@@ -73,7 +73,7 @@ function youtubeQuery(){
 	$("#video-cards").html("<img id='load' src='assets/images/loading.gif'>")
 	console.error(codeSubjects);
 //Search with 10 results, relevance, snippet, embeddable, safesearch enabled, and english
-var queryURL= "https://content.googleapis.com/youtube/v3/search?maxResults=20&order=relevance&part=snippet&q="+codeSubjects+" Tutorials&relevanceLanguage=en&safeSearch=strict&type=video&videoEmbeddable=true&key=AIzaSyCIq_oK2ULb7FUPyEjRiVn7gVicyuiHmag";
+var queryURL= "https://content.googleapis.com/youtube/v3/search?maxResults=6&order=relevance&part=snippet&q="+codeSubjects+" Tutorials&relevanceLanguage=en&safeSearch=strict&type=video&videoEmbeddable=true&key=AIzaSyCIq_oK2ULb7FUPyEjRiVn7gVicyuiHmag";
 
 //api call 
 $.ajax({
