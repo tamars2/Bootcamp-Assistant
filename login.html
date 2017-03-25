@@ -12,6 +12,7 @@
     <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
     <script type="text/javascript" src="assets/js/propeller.min.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/userinfo.js"></script>
     <!-- bxSlider Javascript file -->
     <script src="assets/js/jquery.bxslider.min.js"></script>
     <!-- CSS -->
@@ -38,6 +39,12 @@
           <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a>
           <a class="navbar-brand" href="javascript:void(0);"><img src="assets/images/GATechLogo.png" alt="GATech logo" height="42" width="100"><span style="color:#eeb211">Code Assist</span></a>
         </div>
+        <div class="pmd-navbar-right-icon pull-right">
+          <button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-default" id="settings" type="button"><i class="material-icons pmd-sm">settings</i></button>
+          <button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-default" id="logout" type="button"><i class="material-icons pmd-sm">exit_to_app</i></button>
+          <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary topbar-toggle visible-xs-inline-block" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="material-icons pmd-sm">more_vert</i></a>
+          <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pmd-sidebar-toggle-right"><i class="material-icons" id="right-icon">more_horiz</i></a>
+        </div>
       </nav>
       <!-- closed sidebar -->
       <section id="pmd-main">
@@ -62,11 +69,76 @@
         </aside>
       </section>
     </div>
+
+  <!--video background -->
+   <div class="vid-container">
+      <video class="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
+          <source src="./assets/images/somethingmorev2mp4.mp4">
+      </video>
+   </div>
+</div> 
   </nav>
+  
+  <!-- Modal Login -->  
+  <div tabindex="-1" class="modal fade bca_userpref-ui" id="form-dialog" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog bca-userpref-style">
+		<div class="modal-content">
+			<div class="modal-header pmd-modal-bordered">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+				<h2 class="pmd-card-title-text">User Preferences</h2>
+			</div>
+
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<label id = "bca-userpref-cbx-newuser" class="checkbox-inline pmd-checkbox pmd-checkbox-ripple-effect" data-trigger="hover" data-toggle="popover" data-placement="left" data-content="Check If You Are A New User">
+						<input id = "bca_cbx" type="checkbox" value="false">
+						<span class="pmd-checkbox"> New User</span> 
+					</label>
+					
+					<div class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-userpref-name">Name</label>
+						<input type="text" class="mat-input form-control" id="bca-userpref-name" value="">
+						<span class="help-text ">Required!</span> 
+					</div>
+					
+					<div class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-userpref-username">Email</label>
+						<input type="text" class="mat-input form-control" id="bca-userpref-username" value="">
+						<span class="help-text ">Required!</span> 
+					</div>
+					
+					<div id="bca-userpref-confirmemail-grp" class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-userpref-emailid">Confirm Email </label>
+						<input type="text" class="mat-input form-control" id="bca-userpref-emailid" value="">
+					</div>
+          					<div class="form-group pmd-textfield pmd-textfield-floating-label">
+						<label for="bca-zipcode">Zip Code.</label>
+						<input type="text" class="mat-input form-control" id="bca-zipcode" value="">
+					</div>
+
+				</form>
+			</div>
+      <!-- End Modal Login -->
+  
+			<div class="pmd-modal-action">
+				<button data-dismiss="modal" id="bca-userpref-btn_submit" class="btn pmd-ripple-effect pmd-btn-flat btn-primary" type="button">Save changes</button>
+				<button data-dismiss="modal" id="bca-userpref-btn_discard" class="btn pmd-ripple-effect pmd-btn-flat btn-default" type="button">Discard</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+  
+  
   <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-bottom pmd-z-depth ticker">
     <a class="pmd-caption" href="./credits.html"><p id="copyright"><em>#electriclava</em></p></a>
   </nav>
   <!-- Propeller Sidebar js -->
   <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+  <script>
+    // open the modal form allowing data entry
+    editUserPreference();
+  </script>
 </body>
 </html>

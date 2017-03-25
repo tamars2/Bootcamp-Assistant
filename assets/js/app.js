@@ -63,10 +63,18 @@ $(document).ready(function() {
 ////////DATE & TIME IN FOOTER//////////
 $("#date-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
+<<<<<<< HEAD
 	
 //////bookmark 1///////////
 		$("#url-0").on("click", function() {
 		var queryURL = "http://unfurl.oroboro.com/unfurl?url=http%3A%2F%2Fwww.codeacademy.com";
+=======
+
+	//////bookmark 1///////////
+	$("#url-0").on("click", function(e) {
+		e.preventDefault();
+		var queryURL = "http://unfurl.oroboro.com/unfurl?url=http%3A%2F%2Fwww.freecodecamp.com";
+>>>>>>> 79451bc0042728fad9175954215f5f0d67a4a271
 		$.ajax({
 			url: queryURL,
 			method: "GET"
@@ -146,8 +154,6 @@ $("#date-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 	});
 }); 
 
-
-
-
-
-
+$("#logout").click(function() {
+  alert( "Handler for .click() called." );
+});
