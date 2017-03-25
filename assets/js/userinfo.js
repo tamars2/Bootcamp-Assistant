@@ -2,6 +2,10 @@
 var dataStore; 
 var bcaCurrentUser;
 var validation = [];
+var name_passed = false;
+var email_passed = false;
+var con_email_passed = false;
+var zip_passed = false;
 
 function connedtToDatabase()
 { 
@@ -42,13 +46,8 @@ function openNewURLInTheSameWindow()
 
 function checkEmail(emailTest) 
   {
-
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-    // if (emailTest.length < 4)
-    // {
-      // return false;
-    // }
     if (!filter.test(emailTest)) 
     {
       return false;
@@ -59,59 +58,41 @@ function checkEmail(emailTest)
 function validateZipCode(zipCodeText)
 {
   var parsedZipCode = zipCodeText.split();
-  if (parsedZipCode.length > 10 )
+  if (zipCodeText.length > 10 )
   {
     return false
   }
-  if ((parsedZipCode.length > 5) & (parsedZipCode[5] != '-'))
+  if ((zipCodeText.length > 5) & (parsedZipCode[5] != '-'))
   {
     return false;
   }
-  if (parsedZipCode.length < 5)
-  {
-    return false;
-  }
-  
-}  
-  
-function verifyDataEntry()
-{
-	data = new userPreferenceEntry();
-  
-	if (!checkEmail(data.email))
-	{
-    validation[validation.length] = 'Please supply a valid Email';
-	}
-  
-	if (data.newUser == "new")
-	{
-		if (data.email != data.confirmEmail )
-		{
-      validation[validation.length] = 'Emails entered do not match'+'['+data.email+']'+'['+data.confirmEmail+']';
-		}
-		if (data.name.length<1)
-		{
-      validation[validation.length] = 'Please enter a name '+validation.length;
-		}
-    if (!validateZipCode(data.zipCode))
-    {
-       validation[validation.length] = 'Please supply a valid Zip Code';
-    }	
-  }
-  
-  if (validation.length > 0)
+  if (zipCodeText.length < 5)
   {
     return false;
   }
   return true;
-}
+}  
+  
+	function validated()
+	{
+		
+		if  (((zip_passed) &  (name_passed) & (con_email_passed) & (email_passed)))
+		{
+			$('#bca-userpref-btn_submit').prop('disabled', false);
+		}
+		else
+		{
+			$('#bca-userpref-btn_submit').prop('disabled', true);
+		}
+	}
 
 // Called from the menu bar this opens the login screen
 function editUserPreference()
 {
   dataStore = connedtToDatabase();
 	addEventHandlers();
-  $("#form-dialog").modal("toggle");
+  $("#form-dialog").modal("toggle");	
+	$('#bca-userpref-btn_submit').prop('disabled', true);
 }
 
 // strip out unsupported characters
@@ -184,6 +165,9 @@ function userType(userT)
 	  $("#bca-userpref-emailid-grp").show(); 
     $("#bca-zipcode-grp").show(); 
 		$(".help-text").show()
+    name_passed = false;
+    con_email_passed = false;
+    zip_passed = false;
 	}
 	else // returning
 	{
@@ -192,8 +176,15 @@ function userType(userT)
 		$("#bca-userpref-name-grp").hide(); 
     $("#bca-zipcode-grp").hide();
 		$(".help-text").hide();
+    name_passed = true;
+    con_email_passed = true;
+    zip_passed = true;
 	}
 }
+
+
+
+
 
 // Event Handles for the items on the preference page
 function addEventHandlers()
@@ -201,14 +192,60 @@ function addEventHandlers()
 	$("#form-dialog").on("hidden.bs.modal", function (e) {	
   });
 
+	$("#bca-userpref-name").on("blur", function (e){
+		if ($("#bca-userpref-name").val().trim().length > 0)
+		{
+  	  name_passed = true;
+	    validated();
+		}
+		else
+		{
+			name_passed = false;
+	    validated();
+		}
+	});
+	  
+	$("#bca-userpref-username").on("blur", function (e){
+		if (checkEmail($("#bca-userpref-username").val().trim()))
+		{
+			email_passed = true;
+			validated();
+		}
+		else
+		{
+		  email_passed = false;
+	    validated();
+		}
+	});
+	
+	$("#bca-userpref-emailid").on("blur", function (e){
+		if (checkEmail($("#bca-userpref-emailid").val().trim()) & ($("#bca-userpref-username").val().trim() == $("#bca-userpref-emailid").val().trim()))
+		{
+			con_email_passed = true;
+			validated();
+		}
+		else
+		{
+			con_email_passed = false;
+	    validated();
+		}
+	});
+	
+	$("#bca-zipcode").on("blur", function (e){
+	  if (validateZipCode($("#bca-zipcode").val().trim()))
+	  {
+			zip_passed = true;
+			validated();		 
+	  }
+		else
+		{
+			zip_passed = false;
+	    validated();
+		}
+	});
   
 	$("#bca-userpref-btn_submit").on("click", function (e){
-		//if (
-    verifyDataEntry();
-    //)
-    //{
       submitUIPrefdata();
-    //}
 	});
 	
 	$("#bca-userpref-btn_discard").on("click", function (e){
