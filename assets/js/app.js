@@ -144,5 +144,9 @@ $("#date-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 			console.log("error: " + err);
 		});
 	});
+$('#logout').on("click", function() {
+	document.location.href = "http://frozen-forest-67094.herokuapp.com/login.html";
+});
+
 });
 
