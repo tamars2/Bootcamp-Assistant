@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<head>
-  <meta charset="utf-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>heroku test</title><!-- JS -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript">
-  </script>
-  <script language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js" type="text/javascript">
-  </script>
-  <script src="assets/js/propeller.min.js" type="text/javascript">
-  </script>
-  <script src="assets/js/propeller.js" type="text/javascript">
-  </script>
-  <script src="assets/js/app.js" type="text/javascript">
-  </script>
-  <script src="assets/js/sitepreviewtest.js" type="text/javascript">
-  </script><!-- bxSlider Javascript file -->
-=======
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>heroku test</title>
+    <title>Code Assist</title>
     <!-- JS -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
     <script type="text/javascript" src="assets/js/propeller.min.js"></script> <script type="text/javascript" src="assets/js/propeller.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+
+    <script type="text/javascript" src="assets/js/Youtubepop.js"></script>
+
     <script type="text/javascript" src="assets/js/sitepreviewtest.js"></script>
+
     <!-- bxSlider Javascript file -->
     <script src="assets/js/jquery.bxslider.js"></script>
     <script src="assets/js/jquery.bxslider.min.js"></script>
@@ -51,6 +33,9 @@
     <!-- bxSlider CSS file -->
     <!-- <link href="assets/css/jquery.bxslider.min.css" rel="stylesheet"> -->
     <link href="assets/css/jquery.bxslider.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/favicon2.ico" type="image/x-icon" />
+    
+   
   </head>
   <body>
     <!-- Default open sidebar -->
@@ -81,8 +66,6 @@
           <li class="dropdown pmd-dropdown pmd-user-info">
             <a aria-expanded="false" data-sidebar="true" data-toggle="dropdown" class="btn-user dropdown-toggle media welcome-dropdown" href="javascript:void(0);">
               <div class="media-left">
-                
-                
               </div>
               <div class="media-body media-middle">Menu</div>
             </a>
@@ -90,39 +73,22 @@
           <li class="dropdown pmd-dropdown">
             <a class="dropdown-toggle media pmd-ripple-effect menu" id="frontend" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm frontend">dashboard</i><span class="media-body media-middle frontend">Front End</span></a>
             <ul class="dropdown-menu">
-              <li> <a data-category="HTML" class="job-category pmd-ripple-effect" href="">HTML</a> </li>
-              <li> <a data-category="CSS" class="job-category pmd-ripple-effect" href="">CSS</a> </li>
-              <li> <a data-category="Bootstrap" class="job-category pmd-ripple-effect" href="">Bootstrap</a> </li>
-              <li> <a data-category="Javascript" class="job-category pmd-ripple-effect" href="">Javascript</a> </li>
+              <li> <a data-category="HTML" id = "html" class="job-category pmd-ripple-effect" >HTML</a> </li>
+              <li> <a data-category="CSS" id = "CSS" class="job-category pmd-ripple-effect">CSS</a> </li>
+              <li> <a data-category="Bootstrap" id = "Bootstrap" class="job-category pmd-ripple-effect">Bootstrap</a> </li>
+              <li> <a data-category="Javascript" id = "Javascript" class="job-category pmd-ripple-effect">Javascript</a> </li>
             </ul>
           </li>
           <li class="dropdown pmd-dropdown">
             <a class="dropdown-toggle media pmd-ripple-effect menu" id="backend" data-toggle="dropdown" data-sidebar="true" aria-expanded="false" href="javascript:void(0);"><i class="material-icons media-left pmd-sm backend">dns</i><span class="media-body media-middle backend"> Back End</span></a>
             <ul class="dropdown-menu">
-              <li> <a data-category="node.JS" class="job-category pmd-ripple-effect" href="">node.JS</a> </li>
-              <li> <a data-category="React" class="job-category pmd-ripple-effect" href="">React</a> </li>
-              <li> <a data-category="MongoDB" class="job-category pmd-ripple-effect" href="">MongoDB</a> </li>
-              <li> <a data-category="MySQL" class="job-category pmd-ripple-effect" href="">mySQL</a> </li>
+              <li> <a data-category="node.js" id = "X" class="job-category pmd-ripple-effect">node.JS</a> </li>
+              <li> <a data-category="React Programing tutorial" id = "React"  class="job-category pmd-ripple-effect">React</a> </li>
+              <li> <a data-category="MongoDB" id = "MongoDB" class="job-category pmd-ripple-effect">MongoDB</a> </li>
+              <li> <a data-category="MySQL Programing tutorial" id = "MySQL" class="job-category pmd-ripple-effect">mySQL</a> </li>
             </ul>
           </li>
 
-
-   <!--Bookmarks -->
->>>>>>> 79451bc0042728fad9175954215f5f0d67a4a271
-
-  <script src="assets/js/jquery.bxslider.js">
-  </script>
-  <script src="assets/js/jquery.bxslider.min.js">
-  </script><!-- CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"><!--<link rel = "stylesheet" href="./assets/css/bootstrap.css">-->
-  <!--Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Propeller css -->
-  <link href="./assets/css/propeller.min.css" rel="stylesheet">
-  <link href="./assets/css/style.css" rel="stylesheet"><!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet"><!-- bxSlider CSS file -->
-  <!-- <link href="assets/css/jquery.bxslider.min.css" rel="stylesheet"> -->
-  <link href="assets/css/jquery.bxslider.css" rel="stylesheet">
-</head>
 <body>
   <!-- Default open sidebar -->
   <!-- Nav menu -->
@@ -199,8 +165,10 @@
           </ul>
         </li><!--Bookmarks -->
         <!--    <li class="dropdown pmd-dropdown">
+          <!--Bookmarks -->
+          <!--    <li class="dropdown pmd-dropdown">
             <i class="material-icons media-left pmd-sm">collections_bookmark</i><span class="media-body media-middle">Bookmarks</span></a> -->
-<<<<<<< HEAD
+
         <!--Bookmark 1 -->
         <li>
           <a class="pmd-ripple-effect" data-target="#media-dialog-0" data-toggle="modal" id="url-0" type="button"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Codeacademy</span></a>
@@ -258,130 +226,7 @@
           <div class="modal-body" id="url-2-desc"></div>
           <div class="pmd-modal-action">
             <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" id="url-2-site-link" type="button">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
-=======
-            
-            <!--Bookmark 1 -->
-            <li> <a class="pmd-ripple-effect" data-target="#media-dialog-0" data-toggle="modal" type="button" id="url-0"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Free Code Camp</a></span> </li>
-           
-            <!--Bookmark 2 -->
-             <li> <a class="pmd-ripple-effect" data-target="#media-dialog-1" data-toggle="modal" type="button" id="url-1"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Codeacademy</a></span> </li>
-
-             <!--Bookmark 3 -->
-              <li> <a class="pmd-ripple-effect" data-target="#media-dialog-2" data-toggle="modal" type="button" id="url-2"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">The Odin Project</a></span> </li>
-
-               <!--Bookmark 4 -->
-              <li> <a class="pmd-ripple-effect" data-target="#media-dialog-3" data-toggle="modal" type="button" id="url-3"><i class="material-icons media-left media-middle">bookmark</i> <span class="media-body">Bookmark 4</a></span> </li>
-
-          </li>
-          <li> <a class="pmd-ripple-effect menu" href="https://jsfiddle.net" target="_blank" id="jsfiddle"><i class="material-icons media-left media-middle jsfiddle">code</i> <span class="media-body jsfiddle">jsFiddle</span></a> </li>
-        </ul>
-
-    <!--End of Bookmarks list-->
-      </aside>
-<!--MODALS -->
-
-<!--Bookmark 1 -->
-<div aria-hidden="true" class="modal fade" id="media-dialog-0" style="display: none;" tabindex="-1">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="pmd-modal-media"><img class="img-responsive" id="url-0-image" height="666" width="1184"></div>
-                        <div class="pmd-card-title">
-                          <h2 class="pmd-card-title-text" id="url-0-title"></h2><span class="pmd-card-subtitle-text" id="url-0-second-title"></span>
-                        </div>
-                        <div class="modal-body" id="url-0-desc">
-                      
-                        </div>
-                        <div class="pmd-modal-action">
-                          <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button" id="url-0-site-link">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-
-<!--Bookmark 2 -->
-<div aria-hidden="true" class="modal fade" id="media-dialog-1" style="display: none;" tabindex="-1">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="pmd-modal-media"><img class="img-responsive" id="url-1-image" height="666" width="1184"></div>
-                        <div class="pmd-card-title">
-                          <h2 class="pmd-card-title-text" id="url-1-title"></h2><span class="pmd-card-subtitle-text" id="url-1-second-title"></span>
-                        </div>
-                        <div class="modal-body" id="url-1-desc">
-                      
-                        </div>
-                        <div class="pmd-modal-action">
-                          <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button" id="url-1-site-link">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-
-<!--Bookmark 3 -->
-<div aria-hidden="true" class="modal fade" id="media-dialog-2" style="display: none;" tabindex="-1">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="pmd-modal-media"><img class="img-responsive" id="url-2-image" height="666" width="1184"></div>
-                        <div class="pmd-card-title">
-                          <h2 class="pmd-card-title-text" id="url-2-title"></h2><span class="pmd-card-subtitle-text" id="url-2-second-title"></span>
-                        </div>
-                        <div class="modal-body" id="url-2-desc">
-                      
-                        </div>
-                        <div class="pmd-modal-action">
-                          <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button" id="url-2-site-link">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-
 <!--Bookmark 4 -->
-<div aria-hidden="true" class="modal fade" id="media-dialog-3" style="display: none;" tabindex="-1">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="pmd-modal-media"><img class="img-responsive" id="url-3-image" height="666" width="1184"></div>
-                        <div class="pmd-card-title">
-                          <h2 class="pmd-card-title-text" id="url-3-title"></h2><span class="pmd-card-subtitle-text" id="url-3-second-title"></span>
-                        </div>
-                        <div class="modal-body" id="url-3-desc">
-                      
-                        </div>
-                        <div class="pmd-modal-action">
-                          <button class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button" id="url-3-site-link">Go to site</button> <button class="btn pmd-ripple-effect btn-default pmd-btn-flat" data-dismiss="modal" type="button">Close</button>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-
-<!-- MODALS END -->
-
-      <!-- Content -->
-      
-    
-      <blockquote class="navbar"id="motiv-quote"></blockquote></div></div>
-    </aside>
-    <!-- Content -->
-    
-    <!-- <div class="row pmd-content random">
-      <div class="col-md-8">
-      <blockquote id="motiv-quote"></blockquote></div></div> -->
-      <div class="row pmd-content" id="video-cards">
-        <!-- <div class="col-md-3 card-type">
-          <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-            <div class="pmd-card-media"> <img width="225" height="175" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
-            </div>
-            <div class="pmd-card-title">
-              <h2 class="pmd-card-title-text">Title goes here</h2>
-              <span class="pmd-card-subtitle-text">Secondary text</span>
-            </div>
->>>>>>> 79451bc0042728fad9175954215f5f0d67a4a271
-          </div>
-        </div>
-      </div>
-    </div><!--Bookmark 4 -->
     <div aria-hidden="true" class="modal fade" id="media-dialog-3" style="display: none;" tabindex="-1">
       <div class="modal-sm modal-dialog">
         <div class="modal-content">
@@ -396,129 +241,79 @@
         </div>
       </div>
     </div><!-- MODALS END -->
+    
     <!-- Content -->
-    <div class="row pmd-content random">
-      <div class="col-md-10">
+    
+    <!-- <div class="row pmd-content random">
+      <div class="col-md-8">
+      <blockquote id="motiv-quote"></blockquote></div></div> -->
+      <div class="row pmd-content" id="video-cards">
+        <!-- <div class="col-md-3 card-type">
+          <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
+            <div class="pmd-card-media"> <img width="225" height="175" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+            </div>
+            <div class="pmd-card-title">
+              <h2 class="pmd-card-title-text">Title goes here</h2>
+              <span class="pmd-card-subtitle-text">Secondary text</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Content -->
+
         <blockquote id="motiv-quote"></blockquote>
+
+<!-- <div class="row pmd-content random">
+  <div class="col-md-8">
+  <blockquote id="motiv-quote"></blockquote></div></div> -->
+  <div class="row pmd-content" id="video-cards">
+    
+  </div>
+  <div class="pmd-sidebar-overlay"></div>
+</section>
+<!-- Right sidebar -->
+<aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-closed pmd-z-depth" role="navigation" style="position: absolute;">
+  <!-- Sidebar navigation -->
+  <ul class="nav pmd-sidebar-nav book-cards">
+    <h1 id="printed-media">Printed Media</h1>
+  </ul>
+  <div class="row pmd-content" id="book-cards">
+    <div class="col-sm-1 card-type book-card">
+      <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view book">
+        <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+        </div>
+      </div>
+
+      <div class="pmd-card-title book">
+        <h2 class="pmd-card-title-text">Title goes here</h2>
+        <!-- <span class="pmd-card-subtitle-text">Secondary text</span> -->
       </div>
     </div>
-    <div class="row pmd-content" id="video-cards">
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
+    <div class="col-sm-1 card-type book-card">
+      <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view book">
+        <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
         </div>
       </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="175" src="http://propeller.in/assets/images/profile-pic.png" width="225"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
+      <div class="pmd-card-title book">
+        <h2 class="pmd-card-title-text">Title goes here</h2>
+        <!-- <span class="pmd-card-subtitle-text">Secondary text</span> -->
       </div>
     </div>
-    <div class="pmd-content" id="content">
-      <span class="dropdown pmd-dropdown clearfix"></span>
-      <ul aria-labelledby="dropdownMenu2" class="dropdown-menu" role="menu">
-        <li class="dropdown-header" role="presentation"><span class="dropdown pmd-dropdown clearfix">Front-End</span></li>
-        <li role="presentation"><span class="dropdown pmd-dropdown clearfix"><a href="javascript:void(0);" role="menuitem" tabindex="-1">Action</a></span></li>
-        <li role="presentation"><span class="dropdown pmd-dropdown clearfix"><a href="javascript:void(0);" role="menuitem" tabindex="-1">Another action</a></span></li>
-        <li role="presentation"><span class="dropdown pmd-dropdown clearfix"><a href="javascript:void(0);" role="menuitem" tabindex="-1">Something else here</a></span></li>
-        <li class="dropdown-header" role="presentation"><span class="dropdown pmd-dropdown clearfix">Back-End</span></li>
-        <li role="presentation"><span class="dropdown pmd-dropdown clearfix"><a href="javascript:void(0);" role="menuitem" tabindex="-1">Separated link</a></span></li>
-      </ul>
-    </div><!-- Right sidebar -->
-    <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-closed pmd-z-depth" role="navigation" style="position: absolute;">
-      <!-- Sidebar navigation -->
-      <div class="nav pmd-sidebar-nav" style="margin-left: 2em">
-        <h1 id="printed-media">Printed Media</h1>
-      </div>
-      <div class="col-md-1 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="75" src="http://propeller.in/assets/images/profile-pic.png" width="100"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-1 card-type">
-        <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
-          <div class="pmd-card-media"><img class="img-responsive" height="75" src="http://propeller.in/assets/images/profile-pic.png" width="100"></div>
-          <div class="pmd-card-title">
-            <h2 class="pmd-card-title-text">Title goes here</h2><span class="pmd-card-subtitle-text">Secondary text</span>
-=======
-        </div> -->
-      </div>
+    <div class="col-md-1 card-type book-card">
+      <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view book">
+        <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+
       <!-- Right sidebar -->
       
       <div class="pmd-sidebar-overlay"></div>
     </section>
     <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-closed pmd-z-depth" role="navigation" style="position: absolute;">
-        <!-- Sidebar navigation -->
-        <ul class="nav pmd-sidebar-nav book-cards">
-          <h1 id="printed-media">Printed Media</h1>
-        </ul>
-        <div class="row pmd-content" id="book-cards">
+      <!-- Sidebar navigation -->
+      <ul class="nav pmd-sidebar-nav book-cards">
+        <h1 id="printed-media">Printed Media</h1>
+      </ul>
+      <div class="row pmd-content" id="book-cards">
         <div class="col-sm-1 card-type book-card">
           <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view book">
             <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
@@ -529,29 +324,46 @@
             <!-- <span class="pmd-card-subtitle-text">Secondary text</span> -->
           </div>
         </div>
-        <div class="col-sm-1 card-type book-card">
-          <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view book">
-            <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+        <!-- Right sidebar -->
+        <aside class="pmd-sidebar sidebar-custom sidebar-default pmd-sidebar-right-fixed pmd-sidebar-closed pmd-z-depth" role="navigation" style="position: absolute;">
+          <!-- Sidebar navigation -->
+          <ul class="nav pmd-sidebar-nav">
+            <h1 id="printed-media">Printed Media</h1>
+          </ul>
+          <div class="col-md-1 card-type">
+            <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
+              <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+              </div>
+              <div class="pmd-card-title">
+                <h2 class="pmd-card-title-text">Title goes here</h2>
+                <span class="pmd-card-subtitle-text">Secondary text</span>
+              </div>
             </div>
           </div>
-          <div class="pmd-card-title book">
-            <h2 class="pmd-card-title-text">Title goes here</h2>
-            <!-- <span class="pmd-card-subtitle-text">Secondary text</span> -->
-          </div>
-        </div>
-        <div class="col-md-1 card-type book-card">
-          <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view book">
-            <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+          <div class="col-md-1 card-type">
+            <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
+              <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+              </div>
+              <div class="pmd-card-title">
+                <h2 class="pmd-card-title-text">Title goes here</h2>
+                <span class="pmd-card-subtitle-text">Secondary text</span>
+              </div>
             </div>
->>>>>>> 79451bc0042728fad9175954215f5f0d67a4a271
           </div>
-          <div class="pmd-card-title book">
-            <h2 class="pmd-card-title-text">Title goes here</h2>
-            <!-- <span class="pmd-card-subtitle-text">Secondary text</span> -->
+          <div class="col-md-1 card-type">
+            <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
+              <div class="pmd-card-media"> <img width="100" height="75" class="img-responsive" src="http://propeller.in/assets/images/profile-pic.png">
+              </div>
+              <div class="pmd-card-title">
+                <h2 class="pmd-card-title-text">Title goes here</h2>
+                <span class="pmd-card-subtitle-text">Secondary text</span>
+              </div>
+            </div>
           </div>
+
+
         </div>
-        </div>
-<<<<<<< HEAD
+
       </div>
       <div class="col-md-1 card-type">
         <div class="pmd-card pmd-card-default pmd-z-depth-2 pmd-card-custom-view">
@@ -592,14 +404,6 @@
    
   <script language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js" type="text/javascript">
   </script>
-=======
-      </aside>
-    <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-bottom pmd-z-depth ticker-wrapper">
-    <ul class="bxslider"></ul>
-    <a class="pmd-caption" href="./credits.html"><p id="copyright"><em>#electriclava</em></p></a>
-  </nav>
-  <!-- Propeller Sidebar js -->
-  <script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
->>>>>>> 79451bc0042728fad9175954215f5f0d67a4a271
+
 </body>
 </html>

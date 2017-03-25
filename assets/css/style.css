@@ -23,6 +23,10 @@
 /* Propeller sidebar */
 @import "http://propeller.in/components/sidebar/css/sidebar.css";
 
+
+/* Propeller card css */
+@import "http://propeller.in/components/card/css/card.css";
+
 /* Background video */
 body{
   padding:0;
@@ -39,6 +43,88 @@ video {
     z-index: -100;
     background-size: cover;
 }
+
+
+
+
+#video{
+	height:100% ;
+	width: 100%;
+}
+
+
+/*===================  Credit page background  ====================*/
+.vid-container img {
+	position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+
+
+/*====================  Login page  =====================*/
+.modal-login{
+	background-color: rgba( 250, 255, 255, 0.45 );
+	border-radius: 10px;
+	opacity: 30%;
+	width: 460px;	
+}
+/* User Login */
+.modal-header h2{
+	font-family: 'Roboto Slab', serif;
+	font-size: 25px;
+	text-align: center;
+	font-weight: bolder;
+}
+/* New User*/
+.checkbox-inline span{
+	font-family: 'Roboto Slab', serif;
+	font-size: 18px;
+}
+/* Required*/
+.form-group .help-text{
+	font-family: 'Roboto Slab', serif;
+	font-size: 15px;
+	padding-left: 10px;
+	color: #800000;
+}
+/* Name Email Confirm email Zip code */
+.form-group label{
+	font-family: 'Roboto Slab', serif;
+	padding-left: 10px;
+	font-size: 20px;
+}
+.pmd-modal-action button{
+	font-size: 23px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bolder;
+}
+#bca-userpref-btn_discard{
+	font-size: 15px;
+}
+.modal-body{
+	margin: 0;
+	padding-bottom: 0;
+}
+.modal-header .pmd-modal-bordered{
+	margin-bottom: 0;
+}
+.pmd-modal-action{
+	padding-top: 0;
+}
+
+
+
+
+
+/*====================  Main Page  ====================*/
+
 .container-fluid{
 	background-color: #000;
 }
@@ -54,6 +140,7 @@ video {
 .navbar-header .navbar-brand span{
 	padding-left: 10px;
 	font-weight: bold;
+    font-family: 'Roboto Slab', serif;
 }
 /*header left humberger toggle icon*/
 .pmd-sidebar-toggle .material-icons{
@@ -70,6 +157,7 @@ video {
 .welcome-dropdown h1{
 	font-size: 20px;
 	margin:0;
+	font-family: 'Roboto Slab', serif;
 }
 /*Left panel*/
 .pmd-sidebar-left{
@@ -83,11 +171,13 @@ video {
 .pmd-ripple-effect span {
     color: #fff;
     font-size: 18px;
+    font-family: 'Roboto Slab', serif;
 }
 /*Left panel ripple , inside letter color*/
 .dropdown-menu .pmd-ripple-effect {
 	color: #fff;
 	font-size: 15px;
+	font-family: 'Roboto Slab', serif;
 }
 
 .book {
@@ -129,6 +219,7 @@ a#jsfiddle:hover .jsfiddle {
 	color: #545454;
 }*/
 /*=========Left side panel height not working yet========*/
+
 aside #left-sidebar {
 	height: 100%;
 }
@@ -136,6 +227,7 @@ aside #left-sidebar {
 #printed-media{
 	color: #fff;	
 	text-align: center;
+	font-family: 'Roboto Slab', serif;
 }
 /*Right panel*/
 .pmd-sidebar-right-fixed{
@@ -146,19 +238,17 @@ aside #left-sidebar {
 .pmd-ripple-effect i{
     color: #fff;
 }
-/*not working*/
-#left-sidebar{ 
-	height:100%;
-}
 
 
 
 
-/* Propeller card css */
-@import "http://propeller.in/components/card/css/card.css";
+
 
 .card-type {
-	width: 225px;
+	width: 300px;
+	max-width: 1000px;
+	min-height:400px ;
+	max-height:450px ;
 	margin: 10px;
 
 }
@@ -170,10 +260,9 @@ aside #left-sidebar {
 	padding-right: 20px;
 }
 
-<<<<<<< HEAD
 
 
-@media only screen and (min-width:1024px) and (max-width:1100px){
+/*@media only screen and (min-width:1024px) and (max-width:1100px){
 .about-panel .pmd-card-custom { width: 450px;}
 .about-panel .img-rounded { width: 70px;}
 .gitter-chat-embed{ z-index:99999; left:70%;}
@@ -222,10 +311,38 @@ aside #left-sidebar {
 .bootstrap-card .media-middle{ vertical-align:top;}
 .bootstrap-card .media-middle img{margin-top:20px;}
 .gitter-chat-embed{ z-index:99999; left:15%;}
-=======
+
 .pmd-card {
 	height: 200px;
->>>>>>> 79451bc0042728fad9175954215f5f0d67a4a271
+}
+@media screen and (max-width: 480px){
+.about-panel .add-wire { top: 37%;}
+.header-title h1{ font-size:30px;}
+.banner-content{ font-size:20px;}	
+.section-title { font-size:24px;}
+.section-padding { padding:50px 0 60px;}
+.feature-block .block-content, .how-block .block-content { max-width:100%;}
+.support-content .mail-contact { font-size:18px;}
+.about-panel .img-rounded { width:60px;}
+.feature-block img { max-height:75px; margin-bottom:10px; margin-top:20px;}
+.header-title-bar { padding-top:105px;}
+.main-bg { height:auto; padding-bottom:50px;}
+.about-panel .pmd-card-title-text { word-break:keep-all;}
+.gitter-chat-embed{ z-index:99999; left:0%;}
+}
+@media screen and (max-width: 479px){
+.about-panel .add-wire { top: 39%;}
+  html{ background: url(../images/LandingPagePhoto.png) #000 no-repeat center center fixed; }
+
+  #bgvid { display: none; }
+}
+*/
+	
+
+.pmd-card {
+	height: 350px;
+	overflow-wrap: break-word;
+
 }
 /*----------------------------------- webkits for animations ---------------------------*/
 @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
@@ -250,7 +367,6 @@ aside #left-sidebar {
 
 .bxslider a {
 	color: #ffffff;
-<<<<<<< HEAD
 
 }
 
@@ -261,8 +377,7 @@ aside #left-sidebar {
 	font-size: 16px;
 	letter-spacing: 1px;
 }
-=======
-}
+
 /*----------------------------------- Media Queries ---------------------------*/
 @media only screen and (min-width:1024px) and (max-width:1100px){
 /*.pmd-card-custom { width: 450px;}*/
@@ -314,4 +429,3 @@ img { max-height:75px; margin-bottom:10px; margin-top:20px;}
 .header-title-bar, .header-title-bar .pmd-svg.btn{ padding: 10px 12px;  min-width: inherit;}*/
 }
 /*----------------------------------- Media Queries ---------------------------*/
->>>>>>> 79451bc0042728fad9175954215f5f0d67a4a271
